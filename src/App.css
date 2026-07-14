@@ -1,0 +1,315 @@
+/* Self-hosted display font for the title (contributor-supplied). Vite hashes
+   the file and rewrites the url() for the deployed base path. */
+@font-face {
+  font-family: 'Apes On Parade';
+  src: url('./assets/fonts/apes-on-parade.otf') format('opentype');
+  font-display: swap;
+}
+
+/* Full-bleed so the field of flowers spans the whole viewport width. Children
+   are centered by their own text-align, so no width cap is needed here. */
+.field {
+  width: 100%;
+  padding: 2rem 1.25rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.field__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.field__title {
+  font-family: 'Apes On Parade', system-ui, sans-serif;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.field__subtitle {
+  max-width: 46ch;
+  margin: 0 auto;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* Every flower lives in a fixed 255x255 tile (the contribution canvas), so the
+   field is a tidy grid of squares regardless of screen width. */
+/* Responsive tile: ~2 columns on a phone, denser as the viewport grows. The
+   grid fills the full width and wraps into more rows as flowers are added, so
+   scrolling feels like walking through a field. */
+.flower-grid {
+  --tile: clamp(150px, 40vw, 220px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--tile));
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.flower-grid__cell {
+  display: flex;
+}
+
+.flower-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* The clickable tile that opens the detail panel. */
+.flower-card__button {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 6px 18px rgba(30, 50, 30, 0.12);
+  overflow: hidden;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.flower-card__button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(30, 50, 30, 0.22);
+}
+
+.flower-card__button:focus-visible {
+  outline: 3px solid #1d6fb8;
+  outline-offset: 2px;
+}
+
+/* Subtle "author · model" line beneath each flower. */
+.flower-card__caption {
+  margin: 0.7rem 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--ink);
+  opacity: 0.62;
+}
+
+.flower-card__model::before {
+  content: '·';
+  margin: 0 0.4em;
+  opacity: 0.7;
+}
+
+.flower-card__stage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* A top-down bloom nods gently around its center so a static SVG still feels
+     alive; contributors can add their own animation inside the SVG on top. */
+  transform-origin: 50% 50%;
+  animation: sway 6s ease-in-out infinite;
+  animation-delay: var(--sway-delay, 0s);
+}
+
+.flower-card__button:hover .flower-card__stage {
+  animation-play-state: paused;
+}
+
+.flower-card__stage svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* A soft lift so even a pale/white flower keeps a clean edge on the light tile. */
+  filter: drop-shadow(0 2px 3px rgba(40, 55, 40, 0.22));
+}
+
+.empty-field {
+  text-align: center;
+  opacity: 0.8;
+  padding: 3rem 1rem;
+}
+
+/* Centered call-to-action right below the flowers. */
+.contribute {
+  margin: 2.5rem 0 0;
+  text-align: center;
+}
+
+.contribute a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Only "About", glued to the bottom of the page and centered. */
+.field__footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.field__footer a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- Detail panel: left side on desktop, full-screen on mobile ---- */
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  background: rgba(15, 30, 45, 0.45);
+  animation: overlay-in 0.2s ease;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(440px, 100%);
+  height: 100%;
+  padding: 1.5rem;
+  background: #fff;
+  color: #1e2a1e;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.28);
+  overflow-y: auto;
+  animation: panel-in 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 640px) {
+  .panel {
+    width: 100%;
+  }
+}
+
+.panel__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #333;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.panel__close:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.panel__flower {
+  width: min(340px, 78vw);
+  height: min(340px, 78vw);
+  margin: 1.5rem auto 0.75rem;
+}
+
+.panel__flower svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel__name {
+  font-family: 'Apes On Parade', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+
+.panel__meta {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.panel__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.panel__row dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+}
+
+.panel__row dd {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.panel__model {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.panel__prompt {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  background: #f3f5f1;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes panel-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Respect users who prefer no motion (accessibility, non-negotiable). */
+@media (prefers-reduced-motion: reduce) {
+  .flower-card__button,
+  .flower-card__stage,
+  .panel,
+  .panel-overlay {
+    animation: none;
+    transition: none;
+  }
+  .flower-card__button:hover {
+    transform: none;
+  }
+}

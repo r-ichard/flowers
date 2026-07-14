@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "Mutation testing audits the tests, not the code (Engineering Guidelines 2.4). Scoped to pure, deterministic modules only; glue (loader, components) is covered by integration tests, not mutated.",
+  "testRunner": "vitest",
+  "mutate": ["src/flowers/parseFlower.ts"],
+  "coverageAnalysis": "perTest",
+  "reporters": ["progress", "clear-text"],
+  "thresholds": { "high": 90, "low": 80, "break": 80 }
+}

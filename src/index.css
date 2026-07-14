@@ -1,0 +1,24 @@
+:root {
+  --sky-top: #5fb0ee;
+  --sky-bottom: #d6ecfb;
+  --ink: #1c2b2b;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Hanken Grotesk Variable', 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+  background-attachment: fixed;
+  min-height: 100vh;
+}

@@ -1,0 +1,66 @@
+<!--
+  name: Lavender Iris
+  author: r-ichard
+  model: claude-sonnet-5
+  prompt: Draw an iris flower seen from directly above (top-down bloom, no stem or background) on a 255x255 canvas, centered, as a clean flat vector SVG, showing its characteristic upright standards and drooping falls with a yellow beard marking.
+  comment: First try, no rework needed; used two alternating petal shapes (narrow standards, broad falls) at 60-degree rotations plus small yellow beard marks for the classic iris look.
+  github: r-ichard
+-->
+<svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="fallGrad" cx="50%" cy="85%" r="90%">
+      <stop offset="0%" stop-color="#3a1f5c" />
+      <stop offset="55%" stop-color="#6a4a9e" />
+      <stop offset="100%" stop-color="#a98fd1" />
+    </radialGradient>
+    <radialGradient id="standardGrad" cx="50%" cy="90%" r="90%">
+      <stop offset="0%" stop-color="#5b3a8c" />
+      <stop offset="55%" stop-color="#8a6bc0" />
+      <stop offset="100%" stop-color="#cdb8e8" />
+    </radialGradient>
+    <linearGradient id="beardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbe08a" />
+      <stop offset="100%" stop-color="#e8ab2e" />
+    </linearGradient>
+    <radialGradient id="centerGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#6a4a9e" />
+      <stop offset="100%" stop-color="#2e1a47" />
+    </radialGradient>
+
+    <path id="fallPetal" d="M0,0 C -34,-14 -42,-45 -30,-70 C -18,-92 -10,-98 0,-100 C 10,-98 18,-92 30,-70 C 42,-45 34,-14 0,0 Z" />
+    <path id="standardPetal" d="M0,0 C -14,-30 -16,-65 -8,-88 C -4,-98 4,-98 8,-88 C 16,-65 14,-30 0,0 Z" />
+    <path id="beardMark" d="M-5,-18 C -3,-32 3,-32 5,-18 C 4,-10 -4,-10 -5,-18 Z" />
+  </defs>
+
+  <g transform="translate(127.5 127.5)">
+    <!-- Falls: 3 broad drooping petals -->
+    <g fill="url(#fallGrad)" stroke="#2a1745" stroke-width="1.2">
+      <use href="#fallPetal" transform="rotate(60)" />
+      <use href="#fallPetal" transform="rotate(180)" />
+      <use href="#fallPetal" transform="rotate(300)" />
+    </g>
+
+    <!-- Beard marks on each fall -->
+    <g fill="url(#beardGrad)">
+      <use href="#beardMark" transform="rotate(60)" />
+      <use href="#beardMark" transform="rotate(180)" />
+      <use href="#beardMark" transform="rotate(300)" />
+    </g>
+
+    <!-- Standards: 3 narrow upright petals -->
+    <g fill="url(#standardGrad)" stroke="#3d2666" stroke-width="1">
+      <use href="#standardPetal" transform="rotate(0)" />
+      <use href="#standardPetal" transform="rotate(120)" />
+      <use href="#standardPetal" transform="rotate(240)" />
+    </g>
+
+    <!-- Center -->
+    <circle r="13" fill="url(#centerGrad)" stroke="#1e1030" stroke-width="1" />
+    <g stroke="#cdb8e8" stroke-width="1.4" opacity="0.85">
+      <line x1="0" y1="0" x2="0" y2="-11" transform="rotate(0)" />
+      <line x1="0" y1="0" x2="0" y2="-11" transform="rotate(120)" />
+      <line x1="0" y1="0" x2="0" y2="-11" transform="rotate(240)" />
+    </g>
+    <circle r="3" fill="#f4c430" />
+  </g>
+</svg>

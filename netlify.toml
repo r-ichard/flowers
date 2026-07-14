@@ -1,0 +1,10 @@
+# Netlify builds and deploys via its native Git integration (connect the repo in
+# the Netlify dashboard). Every pull request gets its own Deploy Preview URL, so
+# a contributed flower can be seen in the field before it is merged.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

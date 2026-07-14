@@ -1,0 +1,43 @@
+# Quality gate for every push and pull request. Netlify handles the deploy
+# (native Git integration) — this workflow's job is to keep the field healthy:
+# formatting, linting, types, tests (including the flowers/ contribution gate),
+# and a clean production build. No deploy secrets live here.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  # Audits the tests (not the code) on pure modules. Slower, so it runs on its
+  # own and does not block the deploy path — a quality signal, not a per-commit
+  # gate (Engineering Guidelines 2.4).
+  mutation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run mutation
