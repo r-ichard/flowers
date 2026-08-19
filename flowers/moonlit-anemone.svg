@@ -8,21 +8,21 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
   <defs>
-    <radialGradient id="anemonePetal" cx="50%" cy="85%" r="90%">
+    <radialGradient id="moonlit-anemone-petal" cx="50%" cy="85%" r="90%">
       <stop offset="0%" stop-color="#b8c9f2" />
       <stop offset="45%" stop-color="#dfe7fb" />
       <stop offset="100%" stop-color="#f7f9ff" />
     </radialGradient>
-    <radialGradient id="anemoneHeart" cx="42%" cy="40%" r="70%">
+    <radialGradient id="moonlit-anemone-heart" cx="42%" cy="40%" r="70%">
       <stop offset="0%" stop-color="#3b4a7a" />
       <stop offset="70%" stop-color="#1d2547" />
       <stop offset="100%" stop-color="#12162e" />
     </radialGradient>
-    <path id="anemoneBackPetal"
+    <path id="moonlit-anemone-backPetal"
           d="M127.5 121 C 104 100, 96 62, 108 36 C 116 19, 139 19, 147 36 C 159 62, 151 100, 127.5 121 Z" />
-    <path id="anemoneFrontPetal"
+    <path id="moonlit-anemone-frontPetal"
           d="M127.5 118 C 101 96, 93 58, 106 32 C 115 14, 140 14, 149 32 C 162 58, 154 96, 127.5 118 Z" />
-    <g id="anemoneStamen">
+    <g id="moonlit-anemone-stamen">
       <line x1="127.5" y1="127.5" x2="127.5" y2="93" stroke="#8fa3d9" stroke-width="2" />
       <circle cx="127.5" cy="90" r="4" fill="#e8edfb" />
     </g>
@@ -30,46 +30,46 @@
 
   <!-- Back ring of petals, offset between the front ones -->
   <g fill="#aebfe8" opacity="0.9">
-    <use href="#anemoneBackPetal" transform="rotate(22.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(67.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(112.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(157.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(202.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(247.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(292.5 127.5 127.5)" />
-    <use href="#anemoneBackPetal" transform="rotate(337.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(22.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(67.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(112.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(157.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(202.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(247.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(292.5 127.5 127.5)" />
+    <use href="#moonlit-anemone-backPetal" transform="rotate(337.5 127.5 127.5)" />
   </g>
 
   <!-- Front ring of petals -->
-  <g fill="url(#anemonePetal)" stroke="#93a8de" stroke-width="1">
-    <use href="#anemoneFrontPetal" />
-    <use href="#anemoneFrontPetal" transform="rotate(45 127.5 127.5)" />
-    <use href="#anemoneFrontPetal" transform="rotate(90 127.5 127.5)" />
-    <use href="#anemoneFrontPetal" transform="rotate(135 127.5 127.5)" />
-    <use href="#anemoneFrontPetal" transform="rotate(180 127.5 127.5)" />
-    <use href="#anemoneFrontPetal" transform="rotate(225 127.5 127.5)" />
-    <use href="#anemoneFrontPetal" transform="rotate(270 127.5 127.5)" />
-    <use href="#anemoneFrontPetal" transform="rotate(315 127.5 127.5)" />
+  <g fill="url(#moonlit-anemone-petal)" stroke="#93a8de" stroke-width="1">
+    <use href="#moonlit-anemone-frontPetal" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(45 127.5 127.5)" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(90 127.5 127.5)" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(135 127.5 127.5)" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(180 127.5 127.5)" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(225 127.5 127.5)" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(270 127.5 127.5)" />
+    <use href="#moonlit-anemone-frontPetal" transform="rotate(315 127.5 127.5)" />
   </g>
 
   <!-- Ring of stamens around the heart -->
   <g opacity="0.95">
-    <use href="#anemoneStamen" transform="rotate(15 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(45 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(75 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(105 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(135 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(165 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(195 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(225 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(255 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(285 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(315 127.5 127.5)" />
-    <use href="#anemoneStamen" transform="rotate(345 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(15 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(45 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(75 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(105 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(135 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(165 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(195 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(225 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(255 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(285 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(315 127.5 127.5)" />
+    <use href="#moonlit-anemone-stamen" transform="rotate(345 127.5 127.5)" />
   </g>
 
   <!-- Dark moonlit heart -->
-  <circle cx="127.5" cy="127.5" r="26" fill="url(#anemoneHeart)" />
+  <circle cx="127.5" cy="127.5" r="26" fill="url(#moonlit-anemone-heart)" />
   <circle cx="127.5" cy="127.5" r="26" fill="none" stroke="#4a5a8f" stroke-width="1.5" opacity="0.8" />
   <circle cx="120" cy="120" r="7" fill="#4a5a8f" opacity="0.45" />
 </svg>

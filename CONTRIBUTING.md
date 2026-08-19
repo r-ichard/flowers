@@ -16,6 +16,10 @@ fill in your name, and open a pull request.
 - **A flat SVG on a 255×255 canvas.** The `<svg>` must declare
   `viewBox="0 0 255 255"`.
 - **Seen from above.** Top-down bloom, no stem — just the flower head.
+- **With every `id` prefixed by the file name.** In `blue-poppy.svg`, ids read
+  `blue-poppy-petal`, `blue-poppy-center`. Every flower is inlined into the same
+  page, so two flowers sharing one id make `href="#id"` and `url(#id)` resolve to
+  the wrong flower's shape.
 - **With a benchmark header** naming the model, you, the prompt, and a comment.
 
 ## The benchmark header
@@ -89,8 +93,8 @@ When you open the pull request, GitHub Actions runs the project's checks. For yo
 flower specifically, `tests/flowers.test.ts` reads every file in `flowers/` and
 confirms yours has all required fields, is a real SVG on the `viewBox="0 0 255 255"`
 canvas, is safe (no `<script>`, inline `on...=` handlers, or `javascript:` URIs),
-and has a unique id. If something's off, the failure message names the exact
-reason. Netlify also builds a **preview** so reviewers see your flower in the
+has a unique file name, and shares no `id` with another flower. If something's
+off, the failure message names the exact reason. Netlify also builds a **preview** so reviewers see your flower in the
 field before it merges.
 
 ## Copy-paste prompt for your LLM
@@ -110,6 +114,11 @@ SPECIFICATIONS
   small margin so nothing clips at the edges.
 - Use only flat vector shapes (path, circle, ellipse, rect, polygon, g, use with
   a LOCAL #id, linearGradient/radialGradient). Keep it clean and readable.
+- Every id MUST be prefixed with the file's kebab-case name, because all flowers
+  are inlined into one page and ids are a shared namespace: in blue-poppy.svg
+  write id="blue-poppy-petal", not id="petal", and reference it as
+  href="#blue-poppy-petal" / url(#blue-poppy-petal). A bare id like "petal"
+  silently steals another flower's shape and fails the contribution gate.
 
 SECURITY — the file is inlined into a web page, so it MUST be safe:
 - NO <script> tags.

@@ -8,107 +8,107 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
 <defs>
-  <radialGradient id="disc" cx="50%" cy="50%" r="50%">
+  <radialGradient id="golden-marigold-disc" cx="50%" cy="50%" r="50%">
     <stop offset="0%" stop-color="#6b3a0a" />
     <stop offset="70%" stop-color="#5a2d08" />
     <stop offset="100%" stop-color="#3d1f05" />
   </radialGradient>
-  <ellipse id="p1" cx="0" cy="0" rx="9" ry="16" fill="#ffd24d" />
-  <ellipse id="p2" cx="0" cy="0" rx="11" ry="20" fill="#ffc233" />
-  <ellipse id="p3" cx="0" cy="0" rx="12" ry="23" fill="#ffb733" />
-  <ellipse id="p4" cx="0" cy="0" rx="13" ry="26" fill="#ff9a1a" />
-  <ellipse id="p5" cx="0" cy="0" rx="14" ry="28" fill="#d65a00" />
+  <ellipse id="golden-marigold-p1" cx="0" cy="0" rx="9" ry="16" fill="#ffd24d" />
+  <ellipse id="golden-marigold-p2" cx="0" cy="0" rx="11" ry="20" fill="#ffc233" />
+  <ellipse id="golden-marigold-p3" cx="0" cy="0" rx="12" ry="23" fill="#ffb733" />
+  <ellipse id="golden-marigold-p4" cx="0" cy="0" rx="13" ry="26" fill="#ff9a1a" />
+  <ellipse id="golden-marigold-p5" cx="0" cy="0" rx="14" ry="28" fill="#d65a00" />
 </defs>
   <!-- ring 5 (count=12, r=90) -->
-    <use href="#p5" transform="translate(127.5 127.5) rotate(15.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(45.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(75.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(105.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(135.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(165.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(195.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(225.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(255.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(285.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(315.000) translate(0 -90)" />
-    <use href="#p5" transform="translate(127.5 127.5) rotate(345.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(15.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(45.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(75.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(105.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(135.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(165.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(195.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(225.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(255.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(285.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(315.000) translate(0 -90)" />
+    <use href="#golden-marigold-p5" transform="translate(127.5 127.5) rotate(345.000) translate(0 -90)" />
   <!-- ring 1 (count=12, r=30) -->
-    <use href="#p1" transform="translate(127.5 127.5) rotate(0.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(30.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(60.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(90.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(120.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(150.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(180.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(210.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(240.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(270.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(300.000) translate(0 -30)" />
-    <use href="#p1" transform="translate(127.5 127.5) rotate(330.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(0.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(30.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(60.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(90.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(120.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(150.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(180.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(210.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(240.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(270.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(300.000) translate(0 -30)" />
+    <use href="#golden-marigold-p1" transform="translate(127.5 127.5) rotate(330.000) translate(0 -30)" />
   <!-- ring 2 (count=16, r=48) -->
-    <use href="#p2" transform="translate(127.5 127.5) rotate(11.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(33.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(56.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(78.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(101.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(123.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(146.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(168.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(191.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(213.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(236.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(258.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(281.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(303.750) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(326.250) translate(0 -48)" />
-    <use href="#p2" transform="translate(127.5 127.5) rotate(348.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(11.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(33.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(56.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(78.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(101.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(123.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(146.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(168.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(191.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(213.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(236.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(258.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(281.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(303.750) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(326.250) translate(0 -48)" />
+    <use href="#golden-marigold-p2" transform="translate(127.5 127.5) rotate(348.750) translate(0 -48)" />
   <!-- ring 3 (count=20, r=66) -->
-    <use href="#p3" transform="translate(127.5 127.5) rotate(9.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(27.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(45.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(63.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(81.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(99.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(117.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(135.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(153.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(171.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(189.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(207.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(225.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(243.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(261.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(279.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(297.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(315.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(333.000) translate(0 -66)" />
-    <use href="#p3" transform="translate(127.5 127.5) rotate(351.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(9.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(27.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(45.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(63.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(81.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(99.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(117.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(135.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(153.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(171.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(189.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(207.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(225.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(243.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(261.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(279.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(297.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(315.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(333.000) translate(0 -66)" />
+    <use href="#golden-marigold-p3" transform="translate(127.5 127.5) rotate(351.000) translate(0 -66)" />
   <!-- ring 4 (count=24, r=84) -->
-    <use href="#p4" transform="translate(127.5 127.5) rotate(7.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(22.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(37.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(52.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(67.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(82.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(97.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(112.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(127.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(142.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(157.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(172.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(187.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(202.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(217.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(232.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(247.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(262.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(277.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(292.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(307.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(322.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(337.500) translate(0 -84)" />
-    <use href="#p4" transform="translate(127.5 127.5) rotate(352.500) translate(0 -84)" />
-  <circle cx="127.5" cy="127.5" r="22" fill="url(#disc)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(7.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(22.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(37.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(52.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(67.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(82.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(97.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(112.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(127.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(142.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(157.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(172.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(187.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(202.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(217.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(232.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(247.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(262.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(277.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(292.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(307.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(322.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(337.500) translate(0 -84)" />
+    <use href="#golden-marigold-p4" transform="translate(127.5 127.5) rotate(352.500) translate(0 -84)" />
+  <circle cx="127.5" cy="127.5" r="22" fill="url(#golden-marigold-disc)" />
   <circle cx="121.5" cy="123.5" r="2" fill="#2a1505" opacity="0.7" />
   <circle cx="132.5" cy="122.5" r="2" fill="#2a1505" opacity="0.7" />
   <circle cx="134.5" cy="131.5" r="2" fill="#2a1505" opacity="0.7" />

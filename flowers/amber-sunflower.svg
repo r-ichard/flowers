@@ -8,62 +8,62 @@
 -->
 <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="rayFront" x1="0" y1="1" x2="0" y2="0">
+    <linearGradient id="amber-sunflower-rayFront" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0%" stop-color="#e0820e" />
       <stop offset="55%" stop-color="#f6ad25" />
       <stop offset="100%" stop-color="#ffd95e" />
     </linearGradient>
-    <radialGradient id="discFill" cx="50%" cy="50%" r="55%">
+    <radialGradient id="amber-sunflower-discFill" cx="50%" cy="50%" r="55%">
       <stop offset="0%" stop-color="#8a5526" />
       <stop offset="60%" stop-color="#6b3d17" />
       <stop offset="100%" stop-color="#4f2a0e" />
     </radialGradient>
-    <path id="ray" d="M0 0 C -13 -28 -17 -66 0 -102 C 17 -66 13 -28 0 0 Z" />
+    <path id="amber-sunflower-ray" d="M0 0 C -13 -28 -17 -66 0 -102 C 17 -66 13 -28 0 0 Z" />
   </defs>
 
   <g transform="translate(127.5 127.5)">
     <!-- Back ring of rays, offset half a step -->
     <g fill="#c96f14" stroke="#a05510" stroke-width="0.8">
-      <use href="#ray" transform="rotate(11.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(33.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(56.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(78.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(101.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(123.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(146.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(168.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(191.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(213.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(236.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(258.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(281.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(303.75) scale(1.06)" />
-      <use href="#ray" transform="rotate(326.25) scale(1.06)" />
-      <use href="#ray" transform="rotate(348.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(11.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(33.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(56.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(78.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(101.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(123.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(146.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(168.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(191.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(213.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(236.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(258.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(281.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(303.75) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(326.25) scale(1.06)" />
+      <use href="#amber-sunflower-ray" transform="rotate(348.75) scale(1.06)" />
     </g>
 
     <!-- Front ring of rays -->
-    <g fill="url(#rayFront)" stroke="#b8641a" stroke-width="0.8">
-      <use href="#ray" transform="rotate(0)" />
-      <use href="#ray" transform="rotate(22.5)" />
-      <use href="#ray" transform="rotate(45)" />
-      <use href="#ray" transform="rotate(67.5)" />
-      <use href="#ray" transform="rotate(90)" />
-      <use href="#ray" transform="rotate(112.5)" />
-      <use href="#ray" transform="rotate(135)" />
-      <use href="#ray" transform="rotate(157.5)" />
-      <use href="#ray" transform="rotate(180)" />
-      <use href="#ray" transform="rotate(202.5)" />
-      <use href="#ray" transform="rotate(225)" />
-      <use href="#ray" transform="rotate(247.5)" />
-      <use href="#ray" transform="rotate(270)" />
-      <use href="#ray" transform="rotate(292.5)" />
-      <use href="#ray" transform="rotate(315)" />
-      <use href="#ray" transform="rotate(337.5)" />
+    <g fill="url(#amber-sunflower-rayFront)" stroke="#b8641a" stroke-width="0.8">
+      <use href="#amber-sunflower-ray" transform="rotate(0)" />
+      <use href="#amber-sunflower-ray" transform="rotate(22.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(45)" />
+      <use href="#amber-sunflower-ray" transform="rotate(67.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(90)" />
+      <use href="#amber-sunflower-ray" transform="rotate(112.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(135)" />
+      <use href="#amber-sunflower-ray" transform="rotate(157.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(180)" />
+      <use href="#amber-sunflower-ray" transform="rotate(202.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(225)" />
+      <use href="#amber-sunflower-ray" transform="rotate(247.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(270)" />
+      <use href="#amber-sunflower-ray" transform="rotate(292.5)" />
+      <use href="#amber-sunflower-ray" transform="rotate(315)" />
+      <use href="#amber-sunflower-ray" transform="rotate(337.5)" />
     </g>
 
     <!-- Seed disc -->
-    <circle r="38" fill="url(#discFill)" stroke="#3f2109" stroke-width="1.2" />
+    <circle r="38" fill="url(#amber-sunflower-discFill)" stroke="#3f2109" stroke-width="1.2" />
     <g fill="#3a220d">
       <circle cx="0" cy="-28" r="2.6" />
       <circle cx="14" cy="-24.25" r="2.6" />

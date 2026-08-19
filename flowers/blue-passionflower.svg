@@ -8,48 +8,48 @@
 -->
 <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="pfPetalFill" cx="50%" cy="88%" r="95%">
+    <radialGradient id="blue-passionflower-petalFill" cx="50%" cy="88%" r="95%">
       <stop offset="0%" stop-color="#ffffff" />
       <stop offset="60%" stop-color="#f1effa" />
       <stop offset="100%" stop-color="#d6d0ee" />
     </radialGradient>
-    <radialGradient id="pfSepalFill" cx="50%" cy="88%" r="95%">
+    <radialGradient id="blue-passionflower-sepalFill" cx="50%" cy="88%" r="95%">
       <stop offset="0%" stop-color="#f6f9ef" />
       <stop offset="100%" stop-color="#cfddba" />
     </radialGradient>
 
-    <path id="pfSepal" d="M0 -10 C -10 -34 -13 -78 -6 -110 C -3 -118 3 -118 6 -110 C 13 -78 10 -34 0 -10 Z" />
-    <path id="pfPetal" d="M0 -10 C -13 -32 -16 -74 -7 -104 C -3.5 -112 3.5 -112 7 -104 C 16 -74 13 -32 0 -10 Z" />
+    <path id="blue-passionflower-sepal" d="M0 -10 C -10 -34 -13 -78 -6 -110 C -3 -118 3 -118 6 -110 C 13 -78 10 -34 0 -10 Z" />
+    <path id="blue-passionflower-petal" d="M0 -10 C -13 -32 -16 -74 -7 -104 C -3.5 -112 3.5 -112 7 -104 C 16 -74 13 -32 0 -10 Z" />
 
     <!-- One outer-corona filament, banded purple -> white -> blue, pointing up -->
-    <g id="pfFilament" stroke-linecap="round">
+    <g id="blue-passionflower-filament" stroke-linecap="round">
       <line x1="0" y1="-24" x2="0" y2="-42" stroke="#5b3490" stroke-width="2.8" />
       <line x1="0" y1="-42" x2="0" y2="-54" stroke="#f2f0fa" stroke-width="2.5" />
       <line x1="0" y1="-54" x2="0" y2="-67" stroke="#3d5fc4" stroke-width="2.2" />
     </g>
-    <g id="pfFilQuad">
-      <use href="#pfFilament" />
-      <use href="#pfFilament" transform="rotate(10)" />
-      <use href="#pfFilament" transform="rotate(20)" />
-      <use href="#pfFilament" transform="rotate(30)" />
+    <g id="blue-passionflower-filQuad">
+      <use href="#blue-passionflower-filament" />
+      <use href="#blue-passionflower-filament" transform="rotate(10)" />
+      <use href="#blue-passionflower-filament" transform="rotate(20)" />
+      <use href="#blue-passionflower-filament" transform="rotate(30)" />
     </g>
 
     <!-- One inner-corona filament with a blue tip -->
-    <g id="pfInnerFil">
+    <g id="blue-passionflower-innerFil">
       <line x1="0" y1="-15" x2="0" y2="-34" stroke="#c9d4f2" stroke-width="1.7" stroke-linecap="round" />
       <circle cx="0" cy="-35.5" r="1.7" fill="#7d95d8" />
     </g>
-    <g id="pfInnerTrio">
-      <use href="#pfInnerFil" />
-      <use href="#pfInnerFil" transform="rotate(15)" />
-      <use href="#pfInnerFil" transform="rotate(30)" />
+    <g id="blue-passionflower-innerTrio">
+      <use href="#blue-passionflower-innerFil" />
+      <use href="#blue-passionflower-innerFil" transform="rotate(15)" />
+      <use href="#blue-passionflower-innerFil" transform="rotate(30)" />
     </g>
 
-    <g id="pfAnther">
+    <g id="blue-passionflower-anther">
       <line x1="0" y1="-4" x2="0" y2="-12" stroke="#a9c07a" stroke-width="1.8" />
       <ellipse cx="0" cy="-18" rx="3.4" ry="7" fill="#e4d55e" stroke="#b5a53e" stroke-width="0.8" transform="rotate(-25 0 -18)" />
     </g>
-    <g id="pfStigma">
+    <g id="blue-passionflower-stigma">
       <line x1="0" y1="-2" x2="0" y2="-6.5" stroke="#cfe0a8" stroke-width="1.5" />
       <circle cx="0" cy="-9" r="2.7" fill="#9c6b32" stroke="#7c5125" stroke-width="0.7" />
     </g>
@@ -57,61 +57,61 @@
 
   <g transform="translate(127.5 127.5)">
     <!-- Five sepals, pointing between the petals -->
-    <g fill="url(#pfSepalFill)" stroke="#aebd95" stroke-width="1">
-      <use href="#pfSepal" transform="rotate(36)" />
-      <use href="#pfSepal" transform="rotate(108)" />
-      <use href="#pfSepal" transform="rotate(180)" />
-      <use href="#pfSepal" transform="rotate(252)" />
-      <use href="#pfSepal" transform="rotate(324)" />
+    <g fill="url(#blue-passionflower-sepalFill)" stroke="#aebd95" stroke-width="1">
+      <use href="#blue-passionflower-sepal" transform="rotate(36)" />
+      <use href="#blue-passionflower-sepal" transform="rotate(108)" />
+      <use href="#blue-passionflower-sepal" transform="rotate(180)" />
+      <use href="#blue-passionflower-sepal" transform="rotate(252)" />
+      <use href="#blue-passionflower-sepal" transform="rotate(324)" />
     </g>
 
     <!-- Five white petals -->
-    <g fill="url(#pfPetalFill)" stroke="#b3abd6" stroke-width="1">
-      <use href="#pfPetal" />
-      <use href="#pfPetal" transform="rotate(72)" />
-      <use href="#pfPetal" transform="rotate(144)" />
-      <use href="#pfPetal" transform="rotate(216)" />
-      <use href="#pfPetal" transform="rotate(288)" />
+    <g fill="url(#blue-passionflower-petalFill)" stroke="#b3abd6" stroke-width="1">
+      <use href="#blue-passionflower-petal" />
+      <use href="#blue-passionflower-petal" transform="rotate(72)" />
+      <use href="#blue-passionflower-petal" transform="rotate(144)" />
+      <use href="#blue-passionflower-petal" transform="rotate(216)" />
+      <use href="#blue-passionflower-petal" transform="rotate(288)" />
     </g>
 
     <!-- Outer corona: 36 banded filaments (9 x 4) -->
     <g>
-      <use href="#pfFilQuad" />
-      <use href="#pfFilQuad" transform="rotate(40)" />
-      <use href="#pfFilQuad" transform="rotate(80)" />
-      <use href="#pfFilQuad" transform="rotate(120)" />
-      <use href="#pfFilQuad" transform="rotate(160)" />
-      <use href="#pfFilQuad" transform="rotate(200)" />
-      <use href="#pfFilQuad" transform="rotate(240)" />
-      <use href="#pfFilQuad" transform="rotate(280)" />
-      <use href="#pfFilQuad" transform="rotate(320)" />
+      <use href="#blue-passionflower-filQuad" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(40)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(80)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(120)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(160)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(200)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(240)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(280)" />
+      <use href="#blue-passionflower-filQuad" transform="rotate(320)" />
     </g>
 
     <!-- Inner corona: 24 shorter filaments (8 x 3) -->
     <g transform="rotate(7.5)">
-      <use href="#pfInnerTrio" />
-      <use href="#pfInnerTrio" transform="rotate(45)" />
-      <use href="#pfInnerTrio" transform="rotate(90)" />
-      <use href="#pfInnerTrio" transform="rotate(135)" />
-      <use href="#pfInnerTrio" transform="rotate(180)" />
-      <use href="#pfInnerTrio" transform="rotate(225)" />
-      <use href="#pfInnerTrio" transform="rotate(270)" />
-      <use href="#pfInnerTrio" transform="rotate(315)" />
+      <use href="#blue-passionflower-innerTrio" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(45)" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(90)" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(135)" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(180)" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(225)" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(270)" />
+      <use href="#blue-passionflower-innerTrio" transform="rotate(315)" />
     </g>
 
     <!-- Five splayed yellow anthers -->
     <g>
-      <use href="#pfAnther" transform="rotate(36)" />
-      <use href="#pfAnther" transform="rotate(108)" />
-      <use href="#pfAnther" transform="rotate(180)" />
-      <use href="#pfAnther" transform="rotate(252)" />
-      <use href="#pfAnther" transform="rotate(324)" />
+      <use href="#blue-passionflower-anther" transform="rotate(36)" />
+      <use href="#blue-passionflower-anther" transform="rotate(108)" />
+      <use href="#blue-passionflower-anther" transform="rotate(180)" />
+      <use href="#blue-passionflower-anther" transform="rotate(252)" />
+      <use href="#blue-passionflower-anther" transform="rotate(324)" />
     </g>
 
     <!-- Central ovary with three stigmas on top -->
     <circle r="5.5" fill="#cfe0a8" stroke="#9db46e" stroke-width="1" />
-    <use href="#pfStigma" transform="rotate(90)" />
-    <use href="#pfStigma" transform="rotate(210)" />
-    <use href="#pfStigma" transform="rotate(330)" />
+    <use href="#blue-passionflower-stigma" transform="rotate(90)" />
+    <use href="#blue-passionflower-stigma" transform="rotate(210)" />
+    <use href="#blue-passionflower-stigma" transform="rotate(330)" />
   </g>
 </svg>

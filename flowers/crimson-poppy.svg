@@ -7,12 +7,12 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
   <defs>
-    <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+    <radialGradient id="crimson-poppy-centerGrad" cx="50%" cy="50%" r="50%">
       <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
       <stop offset="70%" style="stop-color:#3d2817;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
     </radialGradient>
-    <radialGradient id="petalGrad" cx="40%" cy="30%" r="60%">
+    <radialGradient id="crimson-poppy-petalGrad" cx="40%" cy="30%" r="60%">
       <stop offset="0%" style="stop-color:#ff4466;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#cc1133;stop-opacity:1" />
     </radialGradient>
@@ -27,12 +27,12 @@
   <ellipse cx="45" cy="90" rx="35" ry="50" fill="#bb0022" opacity="0.8" transform="rotate(300 127.5 127.5)" />
 
   <!-- Middle petals (brighter, more forward) -->
-  <ellipse cx="127.5" cy="50" rx="38" ry="55" fill="url(#petalGrad)" opacity="0.95" transform="rotate(-15 127.5 127.5)" />
-  <ellipse cx="195" cy="75" rx="38" ry="55" fill="url(#petalGrad)" opacity="0.95" transform="rotate(45 127.5 127.5)" />
-  <ellipse cx="210" cy="155" rx="38" ry="55" fill="url(#petalGrad)" opacity="0.95" transform="rotate(105 127.5 127.5)" />
-  <ellipse cx="130" cy="210" rx="38" ry="55" fill="url(#petalGrad)" opacity="0.95" transform="rotate(165 127.5 127.5)" />
-  <ellipse cx="45" cy="180" rx="38" ry="55" fill="url(#petalGrad)" opacity="0.95" transform="rotate(225 127.5 127.5)" />
-  <ellipse cx="35" cy="95" rx="38" ry="55" fill="url(#petalGrad)" opacity="0.95" transform="rotate(285 127.5 127.5)" />
+  <ellipse cx="127.5" cy="50" rx="38" ry="55" fill="url(#crimson-poppy-petalGrad)" opacity="0.95" transform="rotate(-15 127.5 127.5)" />
+  <ellipse cx="195" cy="75" rx="38" ry="55" fill="url(#crimson-poppy-petalGrad)" opacity="0.95" transform="rotate(45 127.5 127.5)" />
+  <ellipse cx="210" cy="155" rx="38" ry="55" fill="url(#crimson-poppy-petalGrad)" opacity="0.95" transform="rotate(105 127.5 127.5)" />
+  <ellipse cx="130" cy="210" rx="38" ry="55" fill="url(#crimson-poppy-petalGrad)" opacity="0.95" transform="rotate(165 127.5 127.5)" />
+  <ellipse cx="45" cy="180" rx="38" ry="55" fill="url(#crimson-poppy-petalGrad)" opacity="0.95" transform="rotate(225 127.5 127.5)" />
+  <ellipse cx="35" cy="95" rx="38" ry="55" fill="url(#crimson-poppy-petalGrad)" opacity="0.95" transform="rotate(285 127.5 127.5)" />
 
   <!-- Front petals (brightest, most forward) -->
   <ellipse cx="127.5" cy="45" rx="40" ry="58" fill="#ff5577" transform="rotate(-30 127.5 127.5)" />
@@ -43,7 +43,7 @@
   <ellipse cx="30" cy="90" rx="40" ry="58" fill="#ff5577" transform="rotate(270 127.5 127.5)" />
 
   <!-- Central disc with texture -->
-  <circle cx="127.5" cy="127.5" r="32" fill="url(#centerGrad)" />
+  <circle cx="127.5" cy="127.5" r="32" fill="url(#crimson-poppy-centerGrad)" />
 
   <!-- Stamen details -->
   <circle cx="127.5" cy="110" r="2.5" fill="#2a2a2a" />

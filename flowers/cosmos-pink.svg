@@ -8,30 +8,30 @@
 -->
 <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="petalFill" cx="50%" cy="85%" r="95%">
+    <radialGradient id="cosmos-pink-petalFill" cx="50%" cy="85%" r="95%">
       <stop offset="0%" stop-color="#d94f7e" />
       <stop offset="55%" stop-color="#f27ba6" />
       <stop offset="100%" stop-color="#fcafc8" />
     </radialGradient>
-    <radialGradient id="discFill" cx="50%" cy="50%" r="60%">
+    <radialGradient id="cosmos-pink-discFill" cx="50%" cy="50%" r="60%">
       <stop offset="0%" stop-color="#f9c74f" />
       <stop offset="70%" stop-color="#f0a52e" />
       <stop offset="100%" stop-color="#d98a1d" />
     </radialGradient>
-    <path id="petal" d="M0 0 C -16 -22 -18 -58 -8 -82 L -3 -76 L 0 -86 L 3 -76 L 8 -82 C 18 -58 16 -22 0 0 Z" />
+    <path id="cosmos-pink-petal" d="M0 0 C -16 -22 -18 -58 -8 -82 L -3 -76 L 0 -86 L 3 -76 L 8 -82 C 18 -58 16 -22 0 0 Z" />
   </defs>
 
   <g transform="translate(127.5 127.5)">
     <!-- Eight notched petals, alternating tilt for depth -->
-    <g fill="url(#petalFill)" stroke="#c2416b" stroke-width="1.1">
-      <use href="#petal" transform="rotate(0)" />
-      <use href="#petal" transform="rotate(45)" />
-      <use href="#petal" transform="rotate(90)" />
-      <use href="#petal" transform="rotate(135)" />
-      <use href="#petal" transform="rotate(180)" />
-      <use href="#petal" transform="rotate(225)" />
-      <use href="#petal" transform="rotate(270)" />
-      <use href="#petal" transform="rotate(315)" />
+    <g fill="url(#cosmos-pink-petalFill)" stroke="#c2416b" stroke-width="1.1">
+      <use href="#cosmos-pink-petal" transform="rotate(0)" />
+      <use href="#cosmos-pink-petal" transform="rotate(45)" />
+      <use href="#cosmos-pink-petal" transform="rotate(90)" />
+      <use href="#cosmos-pink-petal" transform="rotate(135)" />
+      <use href="#cosmos-pink-petal" transform="rotate(180)" />
+      <use href="#cosmos-pink-petal" transform="rotate(225)" />
+      <use href="#cosmos-pink-petal" transform="rotate(270)" />
+      <use href="#cosmos-pink-petal" transform="rotate(315)" />
     </g>
 
     <!-- Stamen ring -->
@@ -47,7 +47,7 @@
     </g>
 
     <!-- Center disc -->
-    <circle r="19" fill="url(#discFill)" stroke="#c77b17" stroke-width="1.2" />
+    <circle r="19" fill="url(#cosmos-pink-discFill)" stroke="#c77b17" stroke-width="1.2" />
     <g fill="#b96f13">
       <circle cx="0" cy="-8" r="1.9" />
       <circle cx="7" cy="-4" r="1.9" />

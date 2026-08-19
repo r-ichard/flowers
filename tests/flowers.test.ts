@@ -30,4 +30,24 @@ describe('flowers/ contribution gate', () => {
     const ids = svgFiles.map(idFromPath);
     expect(new Set(ids).size).toBe(ids.length);
   });
+
+  // Every flower is inlined into the same page, so `id` is a document-wide
+  // namespace: when two flowers claim one id, `href="#id"` and `url(#id)`
+  // resolve to whichever appears first and the later flower renders the wrong
+  // shape — or nothing, if the winner is a gradient and the loser a path.
+  // Prefixing each id with the flower's own slug keeps them apart.
+  it('has no svg ids shared between flowers', () => {
+    const owners = new Map<string, string[]>();
+    for (const file of svgFiles) {
+      const source = readFileSync(join(flowersDir, file), 'utf8');
+      for (const id of new Set([...source.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]))) {
+        owners.set(id, [...(owners.get(id) ?? []), file]);
+      }
+    }
+
+    const shared = [...owners]
+      .filter(([, files]) => files.length > 1)
+      .map(([id, files]) => `#${id} claimed by ${files.join(' + ')}`);
+    expect(shared, `prefix each id with the flower's slug: ${shared.join('; ')}`).toEqual([]);
+  });
 });

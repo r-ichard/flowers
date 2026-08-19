@@ -8,81 +8,81 @@
 -->
 <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="petalOuter" cx="50%" cy="90%" r="90%">
+    <radialGradient id="crimson-dahlia-petalOuter" cx="50%" cy="90%" r="90%">
       <stop offset="0%" stop-color="#7a0b1f" />
       <stop offset="55%" stop-color="#b01834" />
       <stop offset="100%" stop-color="#e2445c" />
     </radialGradient>
-    <radialGradient id="petalMid" cx="50%" cy="90%" r="90%">
+    <radialGradient id="crimson-dahlia-petalMid" cx="50%" cy="90%" r="90%">
       <stop offset="0%" stop-color="#96122a" />
       <stop offset="60%" stop-color="#cf2745" />
       <stop offset="100%" stop-color="#f26073" />
     </radialGradient>
-    <radialGradient id="petalInner" cx="50%" cy="90%" r="90%">
+    <radialGradient id="crimson-dahlia-petalInner" cx="50%" cy="90%" r="90%">
       <stop offset="0%" stop-color="#b21c36" />
       <stop offset="65%" stop-color="#e64a5f" />
       <stop offset="100%" stop-color="#ff8290" />
     </radialGradient>
-    <radialGradient id="core" cx="50%" cy="50%" r="60%">
+    <radialGradient id="crimson-dahlia-core" cx="50%" cy="50%" r="60%">
       <stop offset="0%" stop-color="#ffe08a" />
       <stop offset="60%" stop-color="#f7b733" />
       <stop offset="100%" stop-color="#e08a1e" />
     </radialGradient>
 
-    <path id="petalLong" d="M0 0 C -20 -34 -16 -78 0 -104 C 16 -78 20 -34 0 0 Z" />
-    <path id="petalMed" d="M0 0 C -16 -26 -13 -60 0 -80 C 13 -60 16 -26 0 0 Z" />
-    <path id="petalShort" d="M0 0 C -12 -18 -10 -42 0 -56 C 10 -42 12 -18 0 0 Z" />
+    <path id="crimson-dahlia-petalLong" d="M0 0 C -20 -34 -16 -78 0 -104 C 16 -78 20 -34 0 0 Z" />
+    <path id="crimson-dahlia-petalMed" d="M0 0 C -16 -26 -13 -60 0 -80 C 13 -60 16 -26 0 0 Z" />
+    <path id="crimson-dahlia-petalShort" d="M0 0 C -12 -18 -10 -42 0 -56 C 10 -42 12 -18 0 0 Z" />
   </defs>
 
   <g transform="translate(127.5 127.5)">
     <!-- Outer ring: 12 petals -->
-    <g fill="url(#petalOuter)" stroke="#5e0917" stroke-width="1.2" opacity="0.97">
-      <use href="#petalLong" transform="rotate(0)" />
-      <use href="#petalLong" transform="rotate(30)" />
-      <use href="#petalLong" transform="rotate(60)" />
-      <use href="#petalLong" transform="rotate(90)" />
-      <use href="#petalLong" transform="rotate(120)" />
-      <use href="#petalLong" transform="rotate(150)" />
-      <use href="#petalLong" transform="rotate(180)" />
-      <use href="#petalLong" transform="rotate(210)" />
-      <use href="#petalLong" transform="rotate(240)" />
-      <use href="#petalLong" transform="rotate(270)" />
-      <use href="#petalLong" transform="rotate(300)" />
-      <use href="#petalLong" transform="rotate(330)" />
+    <g fill="url(#crimson-dahlia-petalOuter)" stroke="#5e0917" stroke-width="1.2" opacity="0.97">
+      <use href="#crimson-dahlia-petalLong" transform="rotate(0)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(30)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(60)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(90)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(120)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(150)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(180)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(210)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(240)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(270)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(300)" />
+      <use href="#crimson-dahlia-petalLong" transform="rotate(330)" />
     </g>
 
     <!-- Middle ring: 12 petals, offset -->
-    <g fill="url(#petalMid)" stroke="#7a0f24" stroke-width="1" opacity="0.98">
-      <use href="#petalMed" transform="rotate(15)" />
-      <use href="#petalMed" transform="rotate(45)" />
-      <use href="#petalMed" transform="rotate(75)" />
-      <use href="#petalMed" transform="rotate(105)" />
-      <use href="#petalMed" transform="rotate(135)" />
-      <use href="#petalMed" transform="rotate(165)" />
-      <use href="#petalMed" transform="rotate(195)" />
-      <use href="#petalMed" transform="rotate(225)" />
-      <use href="#petalMed" transform="rotate(255)" />
-      <use href="#petalMed" transform="rotate(285)" />
-      <use href="#petalMed" transform="rotate(315)" />
-      <use href="#petalMed" transform="rotate(345)" />
+    <g fill="url(#crimson-dahlia-petalMid)" stroke="#7a0f24" stroke-width="1" opacity="0.98">
+      <use href="#crimson-dahlia-petalMed" transform="rotate(15)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(45)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(75)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(105)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(135)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(165)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(195)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(225)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(255)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(285)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(315)" />
+      <use href="#crimson-dahlia-petalMed" transform="rotate(345)" />
     </g>
 
     <!-- Inner ring: 10 petals -->
-    <g fill="url(#petalInner)" stroke="#9a172f" stroke-width="0.8">
-      <use href="#petalShort" transform="rotate(0)" />
-      <use href="#petalShort" transform="rotate(36)" />
-      <use href="#petalShort" transform="rotate(72)" />
-      <use href="#petalShort" transform="rotate(108)" />
-      <use href="#petalShort" transform="rotate(144)" />
-      <use href="#petalShort" transform="rotate(180)" />
-      <use href="#petalShort" transform="rotate(216)" />
-      <use href="#petalShort" transform="rotate(252)" />
-      <use href="#petalShort" transform="rotate(288)" />
-      <use href="#petalShort" transform="rotate(324)" />
+    <g fill="url(#crimson-dahlia-petalInner)" stroke="#9a172f" stroke-width="0.8">
+      <use href="#crimson-dahlia-petalShort" transform="rotate(0)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(36)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(72)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(108)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(144)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(180)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(216)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(252)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(288)" />
+      <use href="#crimson-dahlia-petalShort" transform="rotate(324)" />
     </g>
 
     <!-- Golden center -->
-    <circle r="22" fill="url(#core)" stroke="#c9761a" stroke-width="1.2" />
+    <circle r="22" fill="url(#crimson-dahlia-core)" stroke="#c9761a" stroke-width="1.2" />
     <g fill="#b9660f">
       <circle cx="0" cy="-11" r="2.1" />
       <circle cx="9" cy="-6" r="2.1" />

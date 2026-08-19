@@ -41,6 +41,13 @@ Stryker. **Deploy:** Netlify (native Git integration; PR Deploy Previews).
   guideline, not machine-checkable). The header requires `name`, `author`,
   `model`, `prompt`, and `comment` (the author's note on the process); `github`
   is optional. All enforced by `parseFlower`.
+- **`id` is a document-wide namespace, so every id is prefixed with its flower's
+  slug.** The whole field is inlined into one page, which means `href="#id"` and
+  `url(#id)` resolve to the first match in the document — not to the flower that
+  declared it. A bare `id="petal"` in two flowers renders the wrong shape in the
+  later one (and nothing at all when a gradient shadows a path). `parseFlower`
+  can't see this — it validates one file at a time — so the cross-file check
+  lives in `tests/flowers.test.ts` instead.
 - **The field is a grid of clickable flowers; details live in the panel.** No
   name/author on the tiles — clicking a flower opens `FlowerDetailPanel` (left
   side on desktop, full-screen on mobile) with the flower big + its benchmark
