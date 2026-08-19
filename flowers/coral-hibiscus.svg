@@ -1,0 +1,75 @@
+<!--
+  name: Coral Hibiscus
+  author: r-ichard
+  model: opencode-go/grok-4.5
+  prompt: Produce a single self-contained SVG flower seen from directly above (top-down bloom, no stem) on viewBox 0 0 255 255, flat vectors only, with benchmark header fields, safe for inline web use.
+  comment: Created in one pass as a top-down bloom for the flowers benchmark.
+  github: r-ichard
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
+  <defs>
+    <radialGradient id="petalOuter" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff8a6a"/>
+      <stop offset="55%" stop-color="#f04e3a"/>
+      <stop offset="100%" stop-color="#c42828"/>
+    </radialGradient>
+    <radialGradient id="petalInner" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffb08a"/>
+      <stop offset="70%" stop-color="#ff6b4a"/>
+      <stop offset="100%" stop-color="#e03a30"/>
+    </radialGradient>
+    <radialGradient id="throat" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5c1a2e"/>
+      <stop offset="60%" stop-color="#8b2040"/>
+      <stop offset="100%" stop-color="#c42850"/>
+    </radialGradient>
+    <radialGradient id="stigma" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffe08a"/>
+      <stop offset="100%" stop-color="#e8a020"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Five broad outer petals -->
+  <g fill="url(#petalOuter)">
+    <path d="M127.5,127.5 C95,95 70,48 95,28 C118,10 137,18 145,42 C155,72 148,105 127.5,127.5 Z"/>
+    <path d="M127.5,127.5 C95,95 70,48 95,28 C118,10 137,18 145,42 C155,72 148,105 127.5,127.5 Z" transform="rotate(72 127.5 127.5)"/>
+    <path d="M127.5,127.5 C95,95 70,48 95,28 C118,10 137,18 145,42 C155,72 148,105 127.5,127.5 Z" transform="rotate(144 127.5 127.5)"/>
+    <path d="M127.5,127.5 C95,95 70,48 95,28 C118,10 137,18 145,42 C155,72 148,105 127.5,127.5 Z" transform="rotate(216 127.5 127.5)"/>
+    <path d="M127.5,127.5 C95,95 70,48 95,28 C118,10 137,18 145,42 C155,72 148,105 127.5,127.5 Z" transform="rotate(288 127.5 127.5)"/>
+  </g>
+
+  <!-- Five slightly offset inner petals -->
+  <g fill="url(#petalInner)" opacity="0.95">
+    <path d="M127.5,127.5 C102,100 88,62 105,42 C122,24 140,32 146,55 C154,82 145,110 127.5,127.5 Z" transform="rotate(36 127.5 127.5)"/>
+    <path d="M127.5,127.5 C102,100 88,62 105,42 C122,24 140,32 146,55 C154,82 145,110 127.5,127.5 Z" transform="rotate(108 127.5 127.5)"/>
+    <path d="M127.5,127.5 C102,100 88,62 105,42 C122,24 140,32 146,55 C154,82 145,110 127.5,127.5 Z" transform="rotate(180 127.5 127.5)"/>
+    <path d="M127.5,127.5 C102,100 88,62 105,42 C122,24 140,32 146,55 C154,82 145,110 127.5,127.5 Z" transform="rotate(252 127.5 127.5)"/>
+    <path d="M127.5,127.5 C102,100 88,62 105,42 C122,24 140,32 146,55 C154,82 145,110 127.5,127.5 Z" transform="rotate(324 127.5 127.5)"/>
+  </g>
+
+  <!-- Petal veins -->
+  <g stroke="#b82028" stroke-width="1.2" fill="none" opacity="0.35" stroke-linecap="round">
+    <path d="M127.5,118 C120,90 115,55 122,36"/>
+    <path d="M127.5,118 C120,90 115,55 122,36" transform="rotate(72 127.5 127.5)"/>
+    <path d="M127.5,118 C120,90 115,55 122,36" transform="rotate(144 127.5 127.5)"/>
+    <path d="M127.5,118 C120,90 115,55 122,36" transform="rotate(216 127.5 127.5)"/>
+    <path d="M127.5,118 C120,90 115,55 122,36" transform="rotate(288 127.5 127.5)"/>
+  </g>
+
+  <!-- Dark throat -->
+  <circle cx="127.5" cy="127.5" r="28" fill="url(#throat)"/>
+  <circle cx="127.5" cy="127.5" r="18" fill="#4a1228" opacity="0.85"/>
+
+  <!-- Column / stigma -->
+  <circle cx="127.5" cy="127.5" r="8" fill="url(#stigma)"/>
+  <circle cx="127.5" cy="127.5" r="3.5" fill="#fff3c0"/>
+
+  <!-- Five tiny stigma lobes -->
+  <g fill="#f0c040">
+    <ellipse cx="127.5" cy="112" rx="3.2" ry="5.5"/>
+    <ellipse cx="127.5" cy="112" rx="3.2" ry="5.5" transform="rotate(72 127.5 127.5)"/>
+    <ellipse cx="127.5" cy="112" rx="3.2" ry="5.5" transform="rotate(144 127.5 127.5)"/>
+    <ellipse cx="127.5" cy="112" rx="3.2" ry="5.5" transform="rotate(216 127.5 127.5)"/>
+    <ellipse cx="127.5" cy="112" rx="3.2" ry="5.5" transform="rotate(288 127.5 127.5)"/>
+  </g>
+</svg>
