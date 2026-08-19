@@ -1,0 +1,70 @@
+<!--
+  name: Velvet Chrysanthemum
+  author: r-ichard
+  model: opencode-go/mimo-v2.5-pro
+  prompt: Draw a velvet chrysanthemum seen from directly above — a top-down bloom with no stem, no ground, no background, just the flower head centered on the 255x255 canvas.
+  comment: Generated from scratch: layered narrow petals in concentric rings using rotated <use> references, with a radial gradient on the center disc for depth. The file was initially written to the project root instead of flowers/ and had to be moved into the correct directory.
+  github: r-ichard
+-->
+<svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0c040"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </radialGradient>
+    <path id="outer-petal" d="M0,-5 Q6,-95 0,-110 Q-6,-95 0,-5Z" fill="#8b1a1a"/>
+    <path id="mid-petal" d="M0,-5 Q5,-72 0,-85 Q-5,-72 0,-5Z" fill="#a52a2a"/>
+    <path id="inner-petal" d="M0,-4 Q4,-50 0,-60 Q-4,-50 0,-4Z" fill="#c04040"/>
+  </defs>
+  <g transform="translate(127.5, 127.5)">
+    <!-- Outer ring: 16 petals -->
+    <g>
+      <use href="#outer-petal" transform="rotate(0)"/>
+      <use href="#outer-petal" transform="rotate(22.5)"/>
+      <use href="#outer-petal" transform="rotate(45)"/>
+      <use href="#outer-petal" transform="rotate(67.5)"/>
+      <use href="#outer-petal" transform="rotate(90)"/>
+      <use href="#outer-petal" transform="rotate(112.5)"/>
+      <use href="#outer-petal" transform="rotate(135)"/>
+      <use href="#outer-petal" transform="rotate(157.5)"/>
+      <use href="#outer-petal" transform="rotate(180)"/>
+      <use href="#outer-petal" transform="rotate(202.5)"/>
+      <use href="#outer-petal" transform="rotate(225)"/>
+      <use href="#outer-petal" transform="rotate(247.5)"/>
+      <use href="#outer-petal" transform="rotate(270)"/>
+      <use href="#outer-petal" transform="rotate(292.5)"/>
+      <use href="#outer-petal" transform="rotate(315)"/>
+      <use href="#outer-petal" transform="rotate(337.5)"/>
+    </g>
+    <!-- Middle ring: 12 petals, offset 15 degrees -->
+    <g transform="rotate(15)">
+      <use href="#mid-petal" transform="rotate(0)"/>
+      <use href="#mid-petal" transform="rotate(30)"/>
+      <use href="#mid-petal" transform="rotate(60)"/>
+      <use href="#mid-petal" transform="rotate(90)"/>
+      <use href="#mid-petal" transform="rotate(120)"/>
+      <use href="#mid-petal" transform="rotate(150)"/>
+      <use href="#mid-petal" transform="rotate(180)"/>
+      <use href="#mid-petal" transform="rotate(210)"/>
+      <use href="#mid-petal" transform="rotate(240)"/>
+      <use href="#mid-petal" transform="rotate(270)"/>
+      <use href="#mid-petal" transform="rotate(300)"/>
+      <use href="#mid-petal" transform="rotate(330)"/>
+    </g>
+    <!-- Inner ring: 10 petals, offset 18 degrees -->
+    <g transform="rotate(18)">
+      <use href="#inner-petal" transform="rotate(0)"/>
+      <use href="#inner-petal" transform="rotate(36)"/>
+      <use href="#inner-petal" transform="rotate(72)"/>
+      <use href="#inner-petal" transform="rotate(108)"/>
+      <use href="#inner-petal" transform="rotate(144)"/>
+      <use href="#inner-petal" transform="rotate(180)"/>
+      <use href="#inner-petal" transform="rotate(216)"/>
+      <use href="#inner-petal" transform="rotate(252)"/>
+      <use href="#inner-petal" transform="rotate(288)"/>
+      <use href="#inner-petal" transform="rotate(324)"/>
+    </g>
+    <!-- Center disc -->
+    <circle cx="0" cy="0" r="18" fill="url(#center-glow)"/>
+  </g>
+</svg>
