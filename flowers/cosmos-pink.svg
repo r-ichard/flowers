@@ -1,0 +1,62 @@
+<!--
+  name: Pink Cosmos
+  author: r-ichard
+  model: glm-5.3
+  prompt: Draw a pink cosmos flower seen from directly above (top-down bloom, no stem or background) on a 255x255 canvas, centered, as a clean flat vector SVG with eight notched petals and a yellow center.
+  comment: First try; used one notched petal path rotated 8 times at 45 degrees with a two-tone fill, plus a ring of yellow stamen dots around an orange disc center.
+  github: r-ichard
+-->
+<svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="petalFill" cx="50%" cy="85%" r="95%">
+      <stop offset="0%" stop-color="#d94f7e" />
+      <stop offset="55%" stop-color="#f27ba6" />
+      <stop offset="100%" stop-color="#fcafc8" />
+    </radialGradient>
+    <radialGradient id="discFill" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#f9c74f" />
+      <stop offset="70%" stop-color="#f0a52e" />
+      <stop offset="100%" stop-color="#d98a1d" />
+    </radialGradient>
+    <path id="petal" d="M0 0 C -16 -22 -18 -58 -8 -82 L -3 -76 L 0 -86 L 3 -76 L 8 -82 C 18 -58 16 -22 0 0 Z" />
+  </defs>
+
+  <g transform="translate(127.5 127.5)">
+    <!-- Eight notched petals, alternating tilt for depth -->
+    <g fill="url(#petalFill)" stroke="#c2416b" stroke-width="1.1">
+      <use href="#petal" transform="rotate(0)" />
+      <use href="#petal" transform="rotate(45)" />
+      <use href="#petal" transform="rotate(90)" />
+      <use href="#petal" transform="rotate(135)" />
+      <use href="#petal" transform="rotate(180)" />
+      <use href="#petal" transform="rotate(225)" />
+      <use href="#petal" transform="rotate(270)" />
+      <use href="#petal" transform="rotate(315)" />
+    </g>
+
+    <!-- Stamen ring -->
+    <g fill="#f9c74f" stroke="#c77b17" stroke-width="0.7">
+      <circle cx="0" cy="-26" r="3.4" />
+      <circle cx="18" cy="-18" r="3.4" />
+      <circle cx="26" cy="0" r="3.4" />
+      <circle cx="18" cy="18" r="3.4" />
+      <circle cx="0" cy="26" r="3.4" />
+      <circle cx="-18" cy="18" r="3.4" />
+      <circle cx="-26" cy="0" r="3.4" />
+      <circle cx="-18" cy="-18" r="3.4" />
+    </g>
+
+    <!-- Center disc -->
+    <circle r="19" fill="url(#discFill)" stroke="#c77b17" stroke-width="1.2" />
+    <g fill="#b96f13">
+      <circle cx="0" cy="-8" r="1.9" />
+      <circle cx="7" cy="-4" r="1.9" />
+      <circle cx="8" cy="4" r="1.9" />
+      <circle cx="3" cy="8" r="1.9" />
+      <circle cx="-4" cy="7" r="1.9" />
+      <circle cx="-8" cy="0" r="1.9" />
+      <circle cx="-6" cy="-6" r="1.9" />
+      <circle cx="0" cy="0" r="2.2" />
+    </g>
+  </g>
+</svg>
