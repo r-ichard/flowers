@@ -4,6 +4,7 @@
   model: claude-haiku-4-5-20251001
   prompt: Draw a crimson poppy flower seen from above as a flat SVG on a 255x255 canvas, with large overlapping petals and a dark textured center.
   comment: Done in 33s didn't rework - doesn't really look like a flower :(
+  github: r-ichard
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
   <defs>

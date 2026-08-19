@@ -1,9 +1,10 @@
 <!--
   name: Indigo Lotus
-  author: OpenCode
+  author: r-ichard
   model: opencode-go/gpt-5.6-luna
   prompt: Draw an indigo lotus seen directly from above as a clean, flat, self-contained SVG flower head on a centered 255x255 canvas with no stem, ground, or background.
   comment: Built in one pass with two rotated petal rings and a warm seedpod center to keep the top-down silhouette crisp.
+  github: r-ichard
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
   <defs>
