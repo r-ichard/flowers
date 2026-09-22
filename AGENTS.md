@@ -48,10 +48,12 @@ Stryker. **Deploy:** Netlify (native Git integration; PR Deploy Previews).
   later one (and nothing at all when a gradient shadows a path). `parseFlower`
   can't see this — it validates one file at a time — so the cross-file check
   lives in `tests/flowers.test.ts` instead.
-- **The field is a grid of clickable flowers; details live in the panel.** No
-  name/author on the tiles — clicking a flower opens `FlowerDetailPanel` (left
-  side on desktop, full-screen on mobile) with the flower big + its experiment
-  data. The panel is an accessible dialog (Escape closes, focus managed).
+- **The field is a grid of plates; details live in the panel.** Each tile is
+  captioned like a figure in a field guide — `Fig. N`, the flower's name, then
+  `author · model`. The number is the flower's position in the field, assigned
+  by `FlowerGrid`, so it renumbers as flowers are added. Clicking a plate opens
+  `FlowerDetailPanel` (left side on desktop, full-screen on mobile) with the
+  flower big + its experiment data. The panel is an accessible dialog (Escape closes, focus managed).
 - **The contribution gate must stay green and must stay strict.** If you change
   the flower format, update `parseFlower.ts` + its tests, `tests/flowers.test.ts`,
   `CONTRIBUTING.md`, and the seed flowers together.

@@ -2,11 +2,19 @@ import { useEffect, useRef } from 'react';
 import type { Flower } from '../flowers/parseFlower';
 import { profileUrl } from './profileUrl';
 
-// A left-side panel (full-screen on mobile) with the flower shown big and its
-// experiment data. Rendered only while a flower is selected, so mounting it is
+// A left-side panel (full-screen on mobile) with the flower shown big, its
+// figure number, and its experiment data. Rendered only while a flower is selected, so mounting it is
 // the "open" and unmounting is the "close". Accessible dialog: labelled by the
 // flower name, closes on Escape, moves focus in on open and restores it on close.
-export function FlowerDetailPanel({ flower, onClose }: { flower: Flower; onClose: () => void }) {
+export function FlowerDetailPanel({
+  flower,
+  figure,
+  onClose,
+}: {
+  flower: Flower;
+  figure: number;
+  onClose: () => void;
+}) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const headingId = `flower-${flower.id}-name`;
 
@@ -50,6 +58,8 @@ export function FlowerDetailPanel({ flower, onClose }: { flower: Flower; onClose
           aria-label={flower.name}
           dangerouslySetInnerHTML={{ __html: flower.svg }}
         />
+
+        <p className="panel__figure">Fig. {figure}</p>
 
         <h2 id={headingId} className="panel__name">
           {flower.name}

@@ -22,6 +22,14 @@ describe('FlowerGrid', () => {
     expect(screen.getByRole('button', { name: /Bluebell/ })).toBeInTheDocument();
   });
 
+  it('numbers the plates from one in field order', () => {
+    render(
+      <FlowerGrid flowers={[flower('a', 'Aster'), flower('b', 'Bluebell')]} onSelect={() => {}} />,
+    );
+    expect(screen.getByText('Fig. 1')).toBeInTheDocument();
+    expect(screen.getByText('Fig. 2')).toBeInTheDocument();
+  });
+
   it('calls onSelect with the clicked flower', async () => {
     const onSelect = vi.fn();
     const aster = flower('a', 'Aster');

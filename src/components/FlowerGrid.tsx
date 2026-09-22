@@ -28,7 +28,7 @@ export function FlowerGrid({
           className="flower-grid__cell"
           style={{ '--sway-delay': `${index * SWAY_STAGGER_SECONDS}s` } as React.CSSProperties}
         >
-          <FlowerCard flower={flower} onSelect={onSelect} />
+          <FlowerCard flower={flower} figure={index + 1} onSelect={onSelect} />
         </li>
       ))}
     </ul>

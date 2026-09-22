@@ -15,26 +15,28 @@ const flower: Flower = {
 
 describe('FlowerCard', () => {
   it('renders the flower as a button that inlines the svg', () => {
-    render(<FlowerCard flower={flower} onSelect={() => {}} />);
+    render(<FlowerCard flower={flower} figure={3} onSelect={() => {}} />);
     const button = screen.getByRole('button', { name: /Rose/ });
     expect(button.querySelector('svg')).not.toBeNull();
   });
 
   it('calls onSelect with the flower when clicked', async () => {
     const onSelect = vi.fn();
-    render(<FlowerCard flower={flower} onSelect={onSelect} />);
+    render(<FlowerCard flower={flower} figure={3} onSelect={onSelect} />);
     await userEvent.click(screen.getByRole('button', { name: /Rose/ }));
     expect(onSelect).toHaveBeenCalledWith(flower);
   });
 
-  it('shows a subtle author and model caption beneath the flower', () => {
-    render(<FlowerCard flower={flower} onSelect={() => {}} />);
+  it('captions the plate with its figure number, name, author and model', () => {
+    render(<FlowerCard flower={flower} figure={3} onSelect={() => {}} />);
+    expect(screen.getByText('Fig. 3')).toBeInTheDocument();
+    expect(screen.getByText('Rose')).toBeInTheDocument();
     expect(screen.getByText('Jane Doe')).toBeInTheDocument();
     expect(screen.getByText('claude-opus-4-8')).toBeInTheDocument();
   });
 
   it('keeps process notes in the detail panel', () => {
-    render(<FlowerCard flower={flower} onSelect={() => {}} />);
+    render(<FlowerCard flower={flower} figure={3} onSelect={() => {}} />);
     expect(screen.queryByText('One shot.')).toBeNull();
   });
 });
