@@ -1,8 +1,32 @@
 :root {
-  --sky-top: #5fb0ee;
-  --sky-bottom: #d6ecfb;
-  --ink: #1c2b2b;
+  --paper: #f3eddf;
+  --paper-light: #fcf8ee;
+  /* Paper Fibers by Heliodor Jalba, via Transparent Textures / Subtle Patterns.
+     https://www.transparenttextures.com/paper-fibers.html — CC BY-SA 3.0 */
+  --paper-texture: url('./assets/paper-fibers.png');
+  --ink: #403c32;
+  --ink-muted: #706656;
+  --pencil: #c5bba7;
+  --accent: #536544;
+  --font-hand: 'Patrick Hand', 'Segoe Print', cursive;
+  --font-heading: 'Caveat', 'Segoe Print', cursive;
   color-scheme: light;
+}
+
+@font-face {
+  font-family: 'Patrick Hand';
+  src: url('./assets/fonts/patrick-hand.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('./assets/fonts/caveat-semibold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
 }
 
 * {
@@ -16,9 +40,30 @@ body {
 }
 
 body {
-  font-family: 'Hanken Grotesk Variable', 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  line-height: 1.5;
   color: var(--ink);
-  background: linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
-  background-attachment: fixed;
+  background: var(--paper-texture) repeat var(--paper);
   min-height: 100vh;
+}
+
+::selection {
+  background: #deddbb;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
 }

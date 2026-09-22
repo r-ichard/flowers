@@ -1,16 +1,8 @@
-/* Self-hosted display font for the title (contributor-supplied). Vite hashes
-   the file and rewrites the url() for the deployed base path. */
-@font-face {
-  font-family: 'Apes On Parade';
-  src: url('./assets/fonts/apes-on-parade.otf') format('opentype');
-  font-display: swap;
-}
-
 /* Full-bleed so the field of flowers spans the whole viewport width. Children
    are centered by their own text-align, so no width cap is needed here. */
 .field {
   width: 100%;
-  padding: 2rem 1.25rem 1.5rem;
+  padding: 3.5rem 1.25rem 1.5rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,36 +10,35 @@
 
 .field__header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .field__title {
-  font-family: 'Apes On Parade', system-ui, sans-serif;
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin: 0 0 1rem;
 }
 
 .field__subtitle {
   max-width: 46ch;
   margin: 0 auto;
-  opacity: 0.8;
+  color: var(--ink-muted);
   line-height: 1.5;
 }
 
-/* Every flower lives in a fixed 255x255 tile (the contribution canvas), so the
-   field is a tidy grid of squares regardless of screen width. */
 /* Responsive tile: ~2 columns on a phone, denser as the viewport grows. The
    grid fills the full width and wraps into more rows as flowers are added, so
    scrolling feels like walking through a field. */
 .flower-grid {
-  --tile: clamp(150px, 40vw, 220px);
+  --tile: clamp(130px, 40vw, 220px);
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, var(--tile));
+  grid-template-columns: repeat(auto-fill, minmax(0, var(--tile)));
   gap: 1.25rem;
   justify-content: center;
 }
@@ -70,14 +61,16 @@
   color: inherit;
   cursor: pointer;
   display: block;
-  padding: 0;
+  padding: 0.6rem;
   margin: 0;
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 0 6px 18px rgba(30, 50, 30, 0.12);
+  border-radius: 2px 4px 3px 2px;
+  background: var(--paper-texture) repeat var(--paper-light);
+  border: none;
+  box-shadow:
+    0 2px 3px #56462e14,
+    0 7px 15px #56462e12;
   overflow: hidden;
   transition:
     transform 0.16s ease,
@@ -85,23 +78,25 @@
 }
 
 .flower-card__button:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 14px 28px rgba(30, 50, 30, 0.22);
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow:
+    0 4px 6px #56462e14,
+    0 12px 22px #56462e24;
 }
 
 .flower-card__button:focus-visible {
-  outline: 3px solid #1d6fb8;
-  outline-offset: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
 }
 
 /* Subtle "author · model" line beneath each flower. */
 .flower-card__caption {
   margin: 0.7rem 0 0;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.35;
-  color: var(--ink);
-  opacity: 0.62;
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
 }
 
 .flower-card__model::before {
@@ -135,7 +130,7 @@
 
 .empty-field {
   text-align: center;
-  opacity: 0.8;
+  color: var(--ink-muted);
   padding: 3rem 1rem;
 }
 
@@ -146,7 +141,12 @@
 }
 
 .contribute a {
-  color: var(--ink);
+  display: inline-block;
+  padding: 0.25rem 1.1rem 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -159,7 +159,7 @@
 }
 
 .field__footer a {
-  color: var(--ink);
+  color: var(--ink-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -170,7 +170,7 @@
   inset: 0;
   z-index: 100;
   display: flex;
-  background: rgba(15, 30, 45, 0.45);
+  background: #39332866;
   animation: overlay-in 0.2s ease;
 }
 
@@ -181,9 +181,10 @@
   width: min(440px, 100%);
   height: 100%;
   padding: 1.5rem;
-  background: #fff;
-  color: #1e2a1e;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.28);
+  background: var(--paper-texture) repeat var(--paper-light);
+  color: var(--ink);
+  box-shadow: 8px 0 30px #30281933;
+  scrollbar-color: var(--pencil) var(--paper-light);
   overflow-y: auto;
   animation: panel-in 0.26s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -198,21 +199,22 @@
   position: absolute;
   top: 0.9rem;
   right: 0.9rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: grid;
   place-items: center;
-  border: none;
+  border: 1px solid var(--pencil);
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.06);
-  color: #333;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-hand);
   font-size: 1.7rem;
   line-height: 1;
   cursor: pointer;
 }
 
 .panel__close:hover {
-  background: rgba(0, 0, 0, 0.12);
+  background: var(--paper);
 }
 
 .panel__flower {
@@ -228,9 +230,11 @@
 }
 
 .panel__name {
-  font-family: 'Apes On Parade', system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
   text-align: center;
   margin: 0 0 1.25rem;
 }
@@ -239,7 +243,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.95rem;
+  gap: 1.25rem;
 }
 
 .panel__row {
@@ -249,27 +253,21 @@
 }
 
 .panel__row dt {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.55;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
 }
 
 .panel__row dd {
   margin: 0;
-  font-size: 1rem;
-}
-
-.panel__model {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.25rem;
+  overflow-wrap: anywhere;
 }
 
 .panel__note {
   white-space: pre-wrap;
   line-height: 1.5;
-  background: #f3f5f1;
-  border-radius: 10px;
-  padding: 0.75rem 0.9rem;
+  border-top: 1px solid var(--pencil);
+  padding-top: 0.55rem;
 }
 
 @keyframes sway {
