@@ -1,7 +1,7 @@
 import type { Flower } from '../flowers/parseFlower';
 
 // A flower in the field: a clickable tile that opens the detail panel, with a
-// subtle "author · model" caption beneath. The prompt and process notes stay in
+// subtle "author · model" caption beneath. The process notes stay in
 // the panel — the caption is just enough to scan the field by who and which model.
 export function FlowerCard({
   flower,

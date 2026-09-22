@@ -2,7 +2,6 @@
   name: Amber Sunflower
   author: r-ichard
   model: opencode-go/qwen3.8-max
-  prompt: Draw an amber sunflower seen from directly above (top-down bloom, no stem or background) on a 255x255 canvas, centered, as a clean flat vector SVG with two rings of pointed petals around a seeded brown disc.
   comment: One-shot: pasted the benchmark prompt to qwen3.8-max; it drew two rings of pointed petals around a seeded disc on the first try, no fixes needed.
   github: r-ichard
 -->

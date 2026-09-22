@@ -2,7 +2,6 @@
   name: Lavender Iris
   author: r-ichard
   model: claude-sonnet-5
-  prompt: Draw an iris flower seen from directly above (top-down bloom, no stem or background) on a 255x255 canvas, centered, as a clean flat vector SVG, showing its characteristic upright standards and drooping falls with a yellow beard marking.
   comment: First try, no rework needed; used two alternating petal shapes (narrow standards, broad falls) at 60-degree rotations plus small yellow beard marks for the classic iris look.
   github: r-ichard
 -->

@@ -2,7 +2,6 @@
   name: Moonlit Anemone
   author: r-ichard
   model: claude-fable-5
-  prompt: Draw a moonlit anemone seen from directly above as a flat SVG on a 255x255 canvas, with pale blue-white petals and a dark center ringed by stamens.
   comment: Took 1min32, fable decided looking into other flowers first before working for some reason.
   github: r-ichard
 -->

@@ -10,7 +10,7 @@ below are the method underneath it.
 
 A single-page **benchmark of LLM-generated SVG flowers**. Each flower is one SVG
 a model produced; its header comment records the benchmark data (model, author,
-prompt, and the author's note on the process). Contributing is trivial: drop one `.svg` file into
+and the author's note on the process). Contributing is trivial: drop one `.svg` file into
 `flowers/` and open a pull request. Clicking a flower opens a detail panel.
 
 **Stack:** React + Vite + TypeScript. **Tests:** Vitest + Testing Library +
@@ -39,7 +39,7 @@ Stryker. **Deploy:** Netlify (native Git integration; PR Deploy Previews).
 - **The flower contract is: 255×255 top-down, plus benchmark data.** Every flower
   declares `viewBox="0 0 255 255"` and is drawn as if seen from above (a
   guideline, not machine-checkable). The header requires `name`, `author`,
-  `model`, `prompt`, and `comment` (the author's note on the process); `github`
+  `model`, and `comment` (the author's note on the process); `github`
   is optional. All enforced by `parseFlower`.
 - **`id` is a document-wide namespace, so every id is prefixed with its flower's
   slug.** The whole field is inlined into one page, which means `href="#id"` and

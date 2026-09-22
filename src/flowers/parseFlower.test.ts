@@ -5,7 +5,6 @@ const HEADER = `<!--
   name: Sunflower
   author: Jane Doe
   model: claude-opus-4-8
-  prompt: Draw a sunflower seen from above
   comment: Took about a minute; worked on the first try.
   github: janedoe
 -->`;
@@ -18,14 +17,13 @@ const headerWithout = (omit: string) => {
     'name: Rose',
     'author: Sam',
     'model: claude-sonnet-5',
-    'prompt: Draw a rose',
     'comment: Three tries before it looked right.',
   ].filter((line) => !line.startsWith(`${omit}:`));
   return `<!--\n  ${lines.join('\n  ')}\n-->\n${BODY}`;
 };
 
 describe('parseFlower', () => {
-  it('returns the flower with all benchmark fields when the source is valid', () => {
+  it('accepts a flower without a prompt and returns only the supported benchmark fields', () => {
     const result = parseFlower('sunflower', validSource);
     expect(result.ok).toBe(true);
     if (!result.ok) return;
@@ -34,7 +32,6 @@ describe('parseFlower', () => {
       name: 'Sunflower',
       author: 'Jane Doe',
       model: 'claude-opus-4-8',
-      prompt: 'Draw a sunflower seen from above',
       comment: 'Took about a minute; worked on the first try.',
       github: 'janedoe',
       svg: validSource,
@@ -48,7 +45,7 @@ describe('parseFlower', () => {
     expect(result.flower.github).toBeUndefined();
   });
 
-  it.each(['name', 'author', 'model', 'prompt', 'comment'])(
+  it.each(['name', 'author', 'model', 'comment'])(
     'reports an error when the required field %s is missing',
     (field) => {
       const result = parseFlower('x', headerWithout(field));
@@ -59,7 +56,7 @@ describe('parseFlower', () => {
   );
 
   it('treats an empty field value as missing', () => {
-    const source = `<!--\n  name:\n  author: S\n  model: m\n  prompt: p\n  comment: c\n-->\n${BODY}`;
+    const source = `<!--\n  name:\n  author: S\n  model: m\n  comment: c\n-->\n${BODY}`;
     const result = parseFlower('x', source);
     expect(result.ok).toBe(false);
     if (result.ok) return;
@@ -70,21 +67,21 @@ describe('parseFlower', () => {
     const result = parseFlower('x', BODY);
     expect(result.ok).toBe(false);
     if (result.ok) return;
-    for (const field of ['name', 'author', 'model', 'prompt', 'comment']) {
+    for (const field of ['name', 'author', 'model', 'comment']) {
       expect(result.errors).toContain(`missing required field: ${field}`);
     }
   });
 
   it('keeps colons inside a value (only splits on the first colon)', () => {
-    const source = `<!--\n  name: R\n  author: S\n  model: m\n  prompt: Draw this: a big flower\n  comment: c\n-->\n${BODY}`;
+    const source = `<!--\n  name: R\n  author: S\n  model: m\n  comment: Asked for: a big flower\n-->\n${BODY}`;
     const result = parseFlower('x', source);
     expect(result.ok).toBe(true);
     if (!result.ok) return;
-    expect(result.flower.prompt).toBe('Draw this: a big flower');
+    expect(result.flower.comment).toBe('Asked for: a big flower');
   });
 
   it('trims whitespace around keys and values', () => {
-    const source = `<!--\n     name  :   Daisy   \n  author :  Lee \n  model: m\n  prompt: p\n  comment: c\n-->\n${BODY}`;
+    const source = `<!--\n     name  :   Daisy   \n  author :  Lee \n  model: m\n  comment: c\n-->\n${BODY}`;
     const result = parseFlower('daisy', source);
     expect(result.ok).toBe(true);
     if (!result.ok) return;

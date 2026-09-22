@@ -11,7 +11,6 @@ const result: LoadResult = {
       name: 'Iris',
       author: 'Sam',
       model: 'claude-sonnet-5',
-      prompt: 'Draw an iris',
       comment: 'Worked on the first try.',
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255"></svg>',
     },

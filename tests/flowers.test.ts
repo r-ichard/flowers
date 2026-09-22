@@ -24,6 +24,8 @@ describe('flowers/ contribution gate', () => {
     // what to fix without reading this test.
     const reasons = result.ok ? '' : result.errors.join('; ');
     expect(result.ok, `${file}: ${reasons}`).toBe(true);
+    if (!result.ok) return;
+    expect(result.flower).not.toHaveProperty('prompt');
   });
 
   it('has no duplicate flower ids', () => {

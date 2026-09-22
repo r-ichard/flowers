@@ -2,7 +2,6 @@
   name: Aurora Lily
   author: r-ichard
   model: minimax-m3
-  prompt: draw any flower you decide follow default contributer prompt instructions
   comment: Designed a six-tepal lily top-down: a petal and a narrower sepal path defined in <defs> and reused via <use> at 60 degree intervals (sepals at 0/120/240 drawn behind petals at 60/180/300), with six stamens and a golden gradient center disc. Passed the contribution gate on the first run.
   github: r-ichard
 -->

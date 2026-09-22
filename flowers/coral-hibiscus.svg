@@ -2,7 +2,6 @@
   name: Coral Hibiscus
   author: r-ichard
   model: opencode-go/grok-4.5
-  prompt: Produce a single self-contained SVG flower seen from directly above (top-down bloom, no stem) on viewBox 0 0 255 255, flat vectors only, with benchmark header fields, safe for inline web use.
   comment: Created in one pass as a top-down bloom for the flowers benchmark.
   github: r-ichard
 -->

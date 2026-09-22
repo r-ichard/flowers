@@ -9,7 +9,6 @@ const flower: Flower = {
   name: 'Rose',
   author: 'Jane Doe',
   model: 'claude-opus-4-8',
-  prompt: 'Draw a rose',
   comment: 'One shot.',
   svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255"></svg>',
 };
@@ -34,8 +33,8 @@ describe('FlowerCard', () => {
     expect(screen.getByText('claude-opus-4-8')).toBeInTheDocument();
   });
 
-  it('does not display the prompt in the field (that stays in the panel)', () => {
+  it('keeps process notes in the detail panel', () => {
     render(<FlowerCard flower={flower} onSelect={() => {}} />);
-    expect(screen.queryByText('Draw a rose')).toBeNull();
+    expect(screen.queryByText('One shot.')).toBeNull();
   });
 });

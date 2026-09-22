@@ -9,7 +9,6 @@ const flower = (id: string, name: string): Flower => ({
   name,
   author: 'Sam',
   model: 'claude-opus-4-8',
-  prompt: 'p',
   comment: 'c',
   svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255"></svg>',
 });

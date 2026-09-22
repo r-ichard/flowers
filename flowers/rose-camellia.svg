@@ -2,7 +2,6 @@
   name: Rose Camellia
   author: r-ichard
   model: opencode-go/hy3
-  prompt: Draw a top-down flower (just the head, no stem/ground/background) on a 255x255 canvas, flat vector shapes only, safe inline SVG.
   comment: Generated procedurally by arranging rotated petal copies around a center using a local <use> reference.
   github: r-ichard
 -->

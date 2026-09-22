@@ -72,13 +72,9 @@ export function FlowerDetailPanel({ flower, onClose }: { flower: Flower; onClose
               )}
             </dd>
           </div>
-          <div className="panel__row panel__row--prompt">
-            <dt>Prompt</dt>
-            <dd className="panel__prompt">{flower.prompt}</dd>
-          </div>
-          <div className="panel__row panel__row--prompt">
+          <div className="panel__row">
             <dt>Author's notes on the process</dt>
-            <dd className="panel__prompt">{flower.comment}</dd>
+            <dd className="panel__note">{flower.comment}</dd>
           </div>
         </dl>
       </aside>

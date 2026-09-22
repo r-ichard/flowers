@@ -2,7 +2,6 @@
   name: Velvet Chrysanthemum
   author: r-ichard
   model: opencode-go/mimo-v2.5-pro
-  prompt: Draw a velvet chrysanthemum seen from directly above — a top-down bloom with no stem, no ground, no background, just the flower head centered on the 255x255 canvas.
   comment: Generated from scratch: layered narrow petals in concentric rings using rotated <use> references, with a radial gradient on the center disc for depth. The file was initially written to the project root instead of flowers/ and had to be moved into the correct directory.
   github: r-ichard
 -->

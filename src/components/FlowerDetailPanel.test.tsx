@@ -9,18 +9,17 @@ const flower: Flower = {
   name: 'Rose',
   author: 'Jane Doe',
   model: 'claude-opus-4-8',
-  prompt: 'Draw a rose seen from above',
   comment: 'Two attempts; the first had a stem.',
   github: 'janedoe',
   svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255"></svg>',
 };
 
 describe('FlowerDetailPanel', () => {
-  it('shows the benchmark details: name, model, prompt and the author comment', () => {
+  it('shows the benchmark details and author comment without a prompt section', () => {
     render(<FlowerDetailPanel flower={flower} onClose={() => {}} />);
     expect(screen.getByRole('heading', { name: 'Rose' })).toBeInTheDocument();
     expect(screen.getByText('claude-opus-4-8')).toBeInTheDocument();
-    expect(screen.getByText('Draw a rose seen from above')).toBeInTheDocument();
+    expect(screen.queryByText('Prompt')).not.toBeInTheDocument();
     expect(screen.getByText('Two attempts; the first had a stem.')).toBeInTheDocument();
   });
 

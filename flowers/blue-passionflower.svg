@@ -2,7 +2,6 @@
   name: Blue Passionflower
   author: r-ichard
   model: kimi-k3
-  prompt: Draw a flower seen from directly above (top-down bloom, no stem, no ground, no background) as a single safe self-contained flat-vector SVG on a 255x255 canvas centered with a small margin, plus the benchmark header; species chosen: blue passionflower.
   comment: Kimi studied the existing flowers for style first, chose a passionflower as the most distinct from the existing set, and drew it in one pass with rotated use elements; I just approved.
   github: r-ichard
 -->

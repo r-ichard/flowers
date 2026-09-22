@@ -264,7 +264,7 @@
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-.panel__prompt {
+.panel__note {
   white-space: pre-wrap;
   line-height: 1.5;
   background: #f3f5f1;

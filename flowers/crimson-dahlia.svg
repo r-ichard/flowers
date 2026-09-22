@@ -2,7 +2,6 @@
   name: Crimson Dahlia
   author: r-ichard
   model: claude-opus-4-8
-  prompt: Draw a flower seen from directly above (top-down bloom, no stem or background) on a 255x255 canvas, centered, as a clean flat vector SVG.
   comment: Took 1m22s successfully executed default prompt
   github: r-ichard
 -->

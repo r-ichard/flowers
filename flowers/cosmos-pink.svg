@@ -2,7 +2,6 @@
   name: Pink Cosmos
   author: r-ichard
   model: glm-5.3
-  prompt: Draw a pink cosmos flower seen from directly above (top-down bloom, no stem or background) on a 255x255 canvas, centered, as a clean flat vector SVG with eight notched petals and a yellow center.
   comment: First try; used one notched petal path rotated 8 times at 45 degrees with a two-tone fill, plus a ring of yellow stamen dots around an orange disc center.
   github: r-ichard
 -->

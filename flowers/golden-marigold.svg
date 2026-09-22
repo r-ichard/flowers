@@ -2,7 +2,6 @@
   name: Golden Marigold
   author: r-ichard
   model: glm-5.2:cloud
-  prompt: Draw a golden marigold seen from above as a flat SVG on a 255x255 canvas, with densely ruffled layered petals and a dark center.
   comment: Took 1m 24s, it was pretty straight forward but it took a lot of time looking at other files and how project works.
   github: r-ichard
 -->
