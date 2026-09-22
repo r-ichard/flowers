@@ -69,8 +69,8 @@
   background: var(--paper-texture) repeat var(--paper-light);
   border: none;
   box-shadow:
-    0 2px 3px #56462e14,
-    0 7px 15px #56462e12;
+    0 2px 3px #2b323814,
+    0 7px 15px #2b323812;
   overflow: hidden;
   transition:
     transform 0.16s ease,
@@ -80,8 +80,8 @@
 .flower-card__button:hover {
   transform: translateY(-4px) rotate(-1deg);
   box-shadow:
-    0 4px 6px #56462e14,
-    0 12px 22px #56462e24;
+    0 4px 6px #2b323814,
+    0 12px 22px #2b323824;
 }
 
 .flower-card__button:focus-visible {
@@ -170,7 +170,7 @@
   inset: 0;
   z-index: 100;
   display: flex;
-  background: #39332866;
+  background: #2b323866;
   animation: overlay-in 0.2s ease;
 }
 
@@ -183,7 +183,7 @@
   padding: 1.5rem;
   background: var(--paper-texture) repeat var(--paper-light);
   color: var(--ink);
-  box-shadow: 8px 0 30px #30281933;
+  box-shadow: 8px 0 30px #2b323833;
   scrollbar-color: var(--pencil) var(--paper-light);
   overflow-y: auto;
   animation: panel-in 0.26s cubic-bezier(0.22, 1, 0.36, 1);

@@ -1,12 +1,14 @@
 :root {
-  --paper: #f3eddf;
-  --paper-light: #fcf8ee;
-  /* Paper Fibers by Heliodor Jalba, via Transparent Textures / Subtle Patterns.
-     https://www.transparenttextures.com/paper-fibers.html — CC BY-SA 3.0 */
-  --paper-texture: url('./assets/paper-fibers.png');
-  --ink: #403c32;
-  --ink-muted: #706656;
-  --pencil: #c5bba7;
+  --paper: #f6f7f8;
+  --paper-light: #fff;
+  /* Paper Fibers by Heliodor Jalba, via Transparent Textures / Subtle Patterns,
+     recolored from a light wash to a dark grain so the tooth still reads on
+     white. https://www.transparenttextures.com/paper-fibers.html — CC BY-SA 3.0,
+     and this derivative under the same. */
+  --paper-texture: url('./assets/paper-grain.png');
+  --ink: #353a3e;
+  --ink-muted: #676e75;
+  --pencil: #ccd1d6;
   --accent: #536544;
   --font-hand: 'Patrick Hand', 'Segoe Print', cursive;
   --font-heading: 'Caveat', 'Segoe Print', cursive;
@@ -49,7 +51,7 @@ body {
 }
 
 ::selection {
-  background: #deddbb;
+  background: #d9e2e8;
   color: var(--ink);
 }
 
