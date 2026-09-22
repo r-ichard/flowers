@@ -160,34 +160,65 @@
   padding: 3rem 1rem;
 }
 
-/* Centered call-to-action right below the flowers. */
+/* Call-to-action right below the flowers, set as a printed label on its own
+   card stock so it reads as part of the guide rather than a stray link. */
 .contribute {
-  margin: 2.5rem 0 0;
+  margin: 3rem 0 0;
   text-align: center;
 }
 
 .contribute a {
   display: inline-block;
-  padding: 0.25rem 1.1rem 0.4rem;
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  padding: 0.6rem 1.7rem;
+  font-family: var(--font-figure);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--paper-texture) repeat var(--paper-light);
+  border: 1px solid var(--pencil);
+  border-radius: 1px;
+  text-decoration: none;
+  transition:
+    border-color 0.16s ease,
+    color 0.16s ease;
 }
 
-/* Only "About", glued to the bottom of the page and centered. */
+.contribute a:hover {
+  border-color: var(--ink-muted);
+  color: var(--accent);
+}
+
+/* Only "About", glued to the bottom of the page under a short colophon rule. */
 .field__footer {
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   text-align: center;
 }
 
+.field__footer::before {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 1px;
+  margin: 0 auto 1.25rem;
+  background: var(--pencil);
+}
+
 .field__footer a {
+  font-family: var(--font-figure);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--ink-muted);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--pencil);
+  padding-bottom: 2px;
+}
+
+.field__footer a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink-muted);
 }
 
 /* ---- Detail panel: left side on desktop, full-screen on mobile ---- */
