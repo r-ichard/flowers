@@ -5,3 +5,6 @@ reports
 .stryker-tmp
 *.local
 .DS_Store
+
+# Local agent settings — per-machine, never part of a contribution.
+.claude/
