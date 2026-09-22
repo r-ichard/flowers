@@ -53,6 +53,8 @@
 .flower-card {
   display: flex;
   flex-direction: column;
+  /* <figure> ships with a 40px side margin that would shrink every plate. */
+  margin: 0;
   width: 100%;
 }
 
