@@ -15,7 +15,7 @@ const flower: Flower = {
 };
 
 describe('FlowerDetailPanel', () => {
-  it('shows the benchmark details and author comment without a prompt section', () => {
+  it('shows the experiment details and author comment without a prompt section', () => {
     render(<FlowerDetailPanel flower={flower} onClose={() => {}} />);
     expect(screen.getByRole('heading', { name: 'Rose' })).toBeInTheDocument();
     expect(screen.getByText('claude-opus-4-8')).toBeInTheDocument();

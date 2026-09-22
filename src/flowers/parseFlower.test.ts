@@ -23,7 +23,7 @@ const headerWithout = (omit: string) => {
 };
 
 describe('parseFlower', () => {
-  it('accepts a flower without a prompt and returns only the supported benchmark fields', () => {
+  it('accepts a flower without a prompt and returns only the supported experiment fields', () => {
     const result = parseFlower('sunflower', validSource);
     expect(result.ok).toBe(true);
     if (!result.ok) return;

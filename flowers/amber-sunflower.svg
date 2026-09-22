@@ -2,7 +2,7 @@
   name: Amber Sunflower
   author: r-ichard
   model: opencode-go/qwen3.8-max
-  comment: One-shot: pasted the benchmark prompt to qwen3.8-max; it drew two rings of pointed petals around a seeded disc on the first try, no fixes needed.
+  comment: One-shot: pasted the experiment prompt to qwen3.8-max; it drew two rings of pointed petals around a seeded disc on the first try, no fixes needed.
   github: r-ichard
 -->
 <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">

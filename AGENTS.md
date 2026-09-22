@@ -8,8 +8,8 @@ below are the method underneath it.
 
 ## This repo in one screen
 
-A single-page **benchmark of LLM-generated SVG flowers**. Each flower is one SVG
-a model produced; its header comment records the benchmark data (model, author,
+A single-page **experiment in LLM-generated SVG flowers**. Each flower is one SVG
+a model produced; its header comment records the experiment data (model, author,
 and the author's note on the process). Contributing is trivial: drop one `.svg` file into
 `flowers/` and open a pull request. Clicking a flower opens a detail panel.
 
@@ -20,7 +20,7 @@ Stryker. **Deploy:** Netlify (native Git integration; PR Deploy Previews).
 
 | Path                         | Role                                                                                           |
 | ---------------------------- | ---------------------------------------------------------------------------------------------- |
-| `flowers/*.svg`              | The data. One flower per file; benchmark fields in a header comment.                           |
+| `flowers/*.svg`              | The data. One flower per file; experiment fields in a header comment.                          |
 | `src/flowers/parseFlower.ts` | The one pure module — parse + validate the header, reject unsafe SVG. **Mutation-tested.**     |
 | `src/flowers/loader.ts`      | Glue — discovers `flowers/*.svg` via `import.meta.glob`. Pure parts split out and unit-tested. |
 | `src/components/`            | `FlowerGrid`, `FlowerCard`, `FlowerDetailPanel`, `profileUrl` — presentation.                  |
@@ -36,7 +36,7 @@ Stryker. **Deploy:** Netlify (native Git integration; PR Deploy Previews).
 - **`parseFlower.ts` is the mutation-testing target.** After changing it, run
   `npm run mutation` and keep the score ≥ 80 (survivors equivalent or killed).
   It's listed in `stryker.conf.json`; don't add glue (loader/components/IO) there.
-- **The flower contract is: 255×255 top-down, plus benchmark data.** Every flower
+- **The flower contract is: 255×255 top-down, plus experiment data.** Every flower
   declares `viewBox="0 0 255 255"` and is drawn as if seen from above (a
   guideline, not machine-checkable). The header requires `name`, `author`,
   `model`, and `comment` (the author's note on the process); `github`
@@ -50,7 +50,7 @@ Stryker. **Deploy:** Netlify (native Git integration; PR Deploy Previews).
   lives in `tests/flowers.test.ts` instead.
 - **The field is a grid of clickable flowers; details live in the panel.** No
   name/author on the tiles — clicking a flower opens `FlowerDetailPanel` (left
-  side on desktop, full-screen on mobile) with the flower big + its benchmark
+  side on desktop, full-screen on mobile) with the flower big + its experiment
   data. The panel is an accessible dialog (Escape closes, focus managed).
 - **The contribution gate must stay green and must stay strict.** If you change
   the flower format, update `parseFlower.ts` + its tests, `tests/flowers.test.ts`,

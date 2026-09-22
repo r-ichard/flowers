@@ -2,7 +2,7 @@
   name: Coral Hibiscus
   author: r-ichard
   model: opencode-go/grok-4.5
-  comment: Created in one pass as a top-down bloom for the flowers benchmark.
+  comment: Created in one pass as a top-down bloom for the flowers experiment.
   github: r-ichard
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">

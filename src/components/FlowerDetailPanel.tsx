@@ -3,7 +3,7 @@ import type { Flower } from '../flowers/parseFlower';
 import { profileUrl } from './profileUrl';
 
 // A left-side panel (full-screen on mobile) with the flower shown big and its
-// benchmark data. Rendered only while a flower is selected, so mounting it is
+// experiment data. Rendered only while a flower is selected, so mounting it is
 // the "open" and unmounting is the "close". Accessible dialog: labelled by the
 // flower name, closes on Escape, moves focus in on open and restores it on close.
 export function FlowerDetailPanel({ flower, onClose }: { flower: Flower; onClose: () => void }) {
