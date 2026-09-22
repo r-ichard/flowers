@@ -10,24 +10,16 @@
   --ink-muted: #676e75;
   --pencil: #ccd1d6;
   --accent: #536544;
-  --font-hand: 'Patrick Hand', 'Segoe Print', cursive;
-  --font-heading: 'Caveat', 'Segoe Print', cursive;
+  --font-hand: 'Reenie Beanie', 'Segoe Print', cursive;
+  --font-heading: 'Reenie Beanie', 'Segoe Print', cursive;
   color-scheme: light;
 }
 
 @font-face {
-  font-family: 'Patrick Hand';
-  src: url('./assets/fonts/patrick-hand.ttf') format('truetype');
+  font-family: 'Reenie Beanie';
+  src: url('./assets/fonts/reenie-beanie.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Caveat';
-  src: url('./assets/fonts/caveat-semibold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 600;
   font-display: swap;
 }
 
@@ -43,8 +35,8 @@ body {
 
 body {
   font-family: var(--font-hand);
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1.45;
   color: var(--ink);
   background: var(--paper-texture) repeat var(--paper);
   min-height: 100vh;
