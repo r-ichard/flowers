@@ -11,6 +11,9 @@
   --pencil: #ccd1d6;
   --accent: #536544;
   --font-hand: 'Reenie Beanie', 'Segoe Print', cursive;
+  /* The printed half of the field guide: figure labels and plate captions are
+     set in a book serif, the handwriting is the note scribbled next to them. */
+  --font-figure: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
   --font-heading: 'Reenie Beanie', 'Segoe Print', cursive;
   color-scheme: light;
 }
