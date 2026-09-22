@@ -1,7 +1,7 @@
 {
   "name": "flowers",
   "version": "1.0.0",
-  "description": "A community garden of SVG flowers, each contributed via pull request.",
+  "description": "A field guide to SVG flowers drawn by LLMs. One file, one pull request.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,7 +18,8 @@
   "keywords": [
     "svg",
     "flowers",
-    "community",
+    "llm",
+    "field-guide",
     "spa"
   ],
   "license": "MIT",
