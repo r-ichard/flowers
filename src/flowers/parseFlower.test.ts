@@ -89,6 +89,22 @@ describe('parseFlower', () => {
     expect(result.flower.author).toBe('Lee');
   });
 
+  it('ignores header lines without a colon', () => {
+    const source = validSource.replace('-->', 'nameX\n-->');
+    const result = parseFlower('sunflower', source);
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.flower.name).toBe('Sunflower');
+  });
+
+  it('keeps an existing value when a later header entry is empty', () => {
+    const source = validSource.replace('-->', 'name:   \n-->');
+    const result = parseFlower('sunflower', source);
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.flower.name).toBe('Sunflower');
+  });
+
   it('reports an error when there is no svg element', () => {
     const source = HEADER.replace('-->', '-->\n<div>not an svg</div>');
     const result = parseFlower('x', source);
@@ -121,6 +137,12 @@ describe('parseFlower', () => {
 
   it('accepts a viewBox with extra surrounding whitespace', () => {
     const source = `${HEADER}\n<svg viewBox=" 0  0  255  255 "></svg>`;
+    const result = parseFlower('x', source);
+    expect(result.ok).toBe(true);
+  });
+
+  it('accepts whitespace around the viewBox equals sign', () => {
+    const source = `${HEADER}\n<svg viewBox = "0 0 255 255"></svg>`;
     const result = parseFlower('x', source);
     expect(result.ok).toBe(true);
   });
